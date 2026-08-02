@@ -51,7 +51,7 @@ const timeline = [
 function Company() {
   return (
     <>
-      <section className="shell pt-20 pb-16 lg:pt-28 lg:pb-24">
+      <section className="shell section-top">
         <div className="grid-12 gap-y-10">
           <div className="col-span-12 lg:col-span-7">
             <Reveal>
@@ -73,7 +73,7 @@ function Company() {
         </div>
       </section>
 
-      <section className="shell rule-top py-20 lg:py-28">
+      <section className="shell rule-top section-y">
         <div className="grid-12 gap-y-14">
           <div className="col-span-12 lg:col-span-4">
             <Reveal>
@@ -96,7 +96,7 @@ function Company() {
         </div>
       </section>
 
-      <section className="rule-top bg-surface py-20 lg:py-28">
+      <section className="rule-top bg-surface section-y">
         <div className="shell grid-12 gap-y-12">
           <div className="col-span-12 lg:col-span-3">
             <Reveal>
@@ -118,14 +118,14 @@ function Company() {
         </div>
       </section>
 
-      <section className="shell py-24 lg:py-32">
+      <section className="shell section-y">
         <Reveal>
           <h2 className="max-w-2xl text-[2.25rem] leading-[1.1] font-extrabold sm:text-[2.75rem]">
             Work with people who stay.
           </h2>
           <Link
             to="/contact"
-            className="mt-9 inline-flex rounded-full bg-primary px-6 py-3 text-[14px] font-medium text-primary-foreground transition-all duration-500 hover:brightness-110"
+            className="btn btn-primary mt-10"
           >
             Contact Fusionify
           </Link>
