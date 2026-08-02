@@ -79,20 +79,15 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute left-1/2 top-[-18rem] h-[42rem] w-[42rem] -translate-x-1/2 rounded-full opacity-[0.07]"
-          style={{ background: "radial-gradient(circle, var(--brand) 0%, transparent 62%)" }}
-        />
-        <div className="shell relative pt-20 pb-16 lg:pt-28 lg:pb-24">
-          <div className="grid-12 items-center gap-y-14">
+      <section className="relative">
+        <div className="shell section-top">
+          <div className="grid-12 items-center gap-y-16">
             <div className="col-span-12 lg:col-span-6">
               <Reveal>
                 <p className="eyebrow">PT Fusionify Digital Group</p>
               </Reveal>
               <Reveal delay={90}>
-                <h1 className="mt-6 text-[2.75rem] leading-[1.03] font-extrabold sm:text-[3.6rem] lg:text-[4.15rem]">
+                <h1 className="mt-8 text-[2.75rem] leading-[1.03] font-extrabold sm:text-[3.5rem] lg:text-[4rem]">
                   Systems that hold
                   <br />
                   the weight of a
@@ -101,43 +96,32 @@ function Home() {
                 </h1>
               </Reveal>
               <Reveal delay={180}>
-                <p className="mt-7 max-w-md text-[16.5px] leading-[1.72] text-muted-foreground">
+                <p className="mt-8 max-w-md text-[16.5px] leading-[1.75] text-muted-foreground">
                   We are an Indonesian engineering group building the platforms, intelligence and
                   infrastructure that large organisations run on every day.
                 </p>
               </Reveal>
               <Reveal delay={260}>
-                <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-                  <Link
-                    to="/contact"
-                    className="rounded-full bg-primary px-6 py-3 text-[14px] font-medium text-primary-foreground transition-all duration-500 hover:brightness-110"
-                  >
+                <div className="mt-12 flex flex-wrap items-center gap-4">
+                  <Link to="/contact" className="btn btn-primary">
                     Start a conversation
                   </Link>
-                  <Link to="/capabilities" className="link-quiet text-[14px]">
+                  <Link to="/capabilities" className="btn btn-secondary">
                     See how we work
                   </Link>
                 </div>
               </Reveal>
             </div>
 
-            <div className="col-span-12 lg:col-span-6">
+            <div className="col-span-12 lg:col-span-5 lg:col-start-8">
               <div ref={parallax} style={{ transform: "translateY(var(--parallax, 0px))" }}>
-                <div className="relative mx-auto aspect-square w-full max-w-[30rem]">
-                  <div
-                    aria-hidden
-                    className="absolute inset-[14%] rounded-full blur-3xl"
-                    style={{
-                      background:
-                        "radial-gradient(circle at 40% 35%, color-mix(in oklab, var(--brand) 34%, transparent), transparent 68%)",
-                    }}
-                  />
+                <div className="relative mx-auto aspect-square w-full max-w-[28rem]">
                   <img
                     src={heroEmblem}
                     alt="Fusionify emblem rendered in three dimensions"
                     width={1280}
                     height={1280}
-                    className="float-slow relative h-full w-full object-contain drop-shadow-[0_50px_60px_rgba(18,114,224,0.22)]"
+                    className="float-slow relative h-full w-full object-contain drop-shadow-[0_40px_56px_rgba(20,26,44,0.16)]"
                   />
                 </div>
               </div>
@@ -145,6 +129,7 @@ function Home() {
           </div>
         </div>
       </section>
+
 
       {/* Positioning statement */}
       <section className="shell rule-top py-20 lg:py-28">
