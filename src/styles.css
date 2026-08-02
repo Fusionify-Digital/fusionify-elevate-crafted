@@ -467,6 +467,17 @@
   }
 }
 
+/* Illustrations & imagery — settle gently on hover */
+@utility media-lift {
+  transition:
+    transform 0.9s var(--ease-premium),
+    filter 0.9s var(--ease-premium);
+
+  &:hover {
+    transform: translate3d(0, -6px, 0) scale(1.012);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -477,9 +488,12 @@
     animation: none;
   }
 
-  .reveal {
+  .reveal,
+  .stagger > * {
     opacity: 1;
     transform: none;
+    filter: none;
+    clip-path: none;
     transition: none;
   }
 }
