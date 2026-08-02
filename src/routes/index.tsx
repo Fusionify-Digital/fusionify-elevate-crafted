@@ -79,30 +79,55 @@ function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative">
+      <section className="relative isolate overflow-hidden">
+        <div className="hero-canvas" aria-hidden="true">
+          <div className="hero-grid" />
+          <div
+            className="hero-glow"
+            style={{
+              inset: "-12% 6% auto auto",
+              width: "44rem",
+              height: "44rem",
+              background:
+                "radial-gradient(circle, color-mix(in oklab, var(--brand) 22%, transparent) 0%, transparent 68%)",
+            }}
+          />
+          <div
+            className="hero-glow"
+            style={{
+              inset: "auto auto -20% -10%",
+              width: "34rem",
+              height: "34rem",
+              background:
+                "radial-gradient(circle, color-mix(in oklab, var(--accent, var(--brand)) 14%, transparent) 0%, transparent 70%)",
+            }}
+          />
+        </div>
+
         <div className="shell section-top">
-          <div className="grid-12 items-center gap-y-16">
+          <div className="grid-12 items-center gap-y-20">
             <div className="col-span-12 lg:col-span-6">
               <Reveal>
                 <p className="eyebrow">PT Fusionify Digital Group</p>
               </Reveal>
-              <Reveal delay={90}>
-                <h1 className="mt-8 text-[2.75rem] leading-[1.03] font-extrabold sm:text-[3.5rem] lg:text-[4rem]">
-                  Systems that hold
+              <Reveal delay={120}>
+                <h1 className="mt-10 text-[2.9rem] leading-[1.02] font-extrabold tracking-[-0.03em] sm:text-[3.75rem] lg:text-[4.25rem]">
+                  Digital infrastructure
                   <br />
-                  the weight of a
+                  enterprises can
                   <br />
-                  <span className="text-primary">whole business.</span>
+                  <span className="text-primary">trust for decades.</span>
                 </h1>
               </Reveal>
-              <Reveal delay={180}>
-                <p className="mt-8 max-w-md text-[16.5px] leading-[1.75] text-muted-foreground">
-                  We are an Indonesian engineering group building the platforms, intelligence and
-                  infrastructure that large organisations run on every day.
+              <Reveal delay={240}>
+                <p className="mt-10 max-w-lg text-[17px] leading-[1.75] text-muted-foreground">
+                  We engineer the platforms, applied intelligence and cloud foundations that
+                  Indonesia&rsquo;s largest organisations depend on — designed for scale, held to an
+                  enterprise standard, and accountable long after launch.
                 </p>
               </Reveal>
-              <Reveal delay={260}>
-                <div className="mt-12 flex flex-wrap items-center gap-4">
+              <Reveal delay={360}>
+                <div className="mt-14 flex flex-wrap items-center gap-4">
                   <Link to="/contact" className="btn btn-primary">
                     Start a conversation
                   </Link>
@@ -111,17 +136,32 @@ function Home() {
                   </Link>
                 </div>
               </Reveal>
+              <Reveal delay={460}>
+                <p className="mt-14 max-w-md border-t border-border pt-6 text-[13px] leading-[1.7] tracking-[-0.005em] text-muted-foreground">
+                  Trusted across banking, logistics and energy — 40+ enterprise programmes
+                  delivered, 99.98% median availability.
+                </p>
+              </Reveal>
             </div>
 
             <div className="col-span-12 lg:col-span-5 lg:col-start-8">
               <div ref={parallax} style={{ transform: "translateY(var(--parallax, 0px))" }}>
-                <div className="relative mx-auto aspect-square w-full max-w-[28rem]">
+                <div className="hero-stage relative mx-auto aspect-square w-full max-w-[30rem]">
+                  <div
+                    aria-hidden="true"
+                    className="ground-shadow absolute inset-x-[18%] bottom-[6%] h-[8%] rounded-[9999px]"
+                    style={{
+                      background:
+                        "radial-gradient(ellipse at center, oklch(0.2 0.02 262 / 0.22) 0%, transparent 72%)",
+                      filter: "blur(14px)",
+                    }}
+                  />
                   <img
                     src={heroEmblem}
                     alt="Fusionify emblem rendered in three dimensions"
                     width={1280}
                     height={1280}
-                    className="float-slow relative h-full w-full object-contain drop-shadow-[0_40px_56px_rgba(20,26,44,0.16)]"
+                    className="float-3d relative h-full w-full object-contain drop-shadow-[0_48px_64px_rgba(20,26,44,0.18)]"
                   />
                 </div>
               </div>
@@ -129,6 +169,7 @@ function Home() {
           </div>
         </div>
       </section>
+
 
       {/* Positioning statement */}
       <section className="shell rule-top section-y">
