@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroEmblem from "@/assets/hero-emblem.png";
 import mascot from "@/assets/fusionify-mascot.png.asset.json";
-import { Reveal, useParallax } from "@/components/reveal";
+import { Reveal, Stagger, useCountUp, useParallax } from "@/components/reveal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -119,7 +119,7 @@ function Home() {
                   <span className="text-primary">trust for decades.</span>
                 </h1>
               </Reveal>
-              <Reveal delay={240}>
+              <Reveal delay={240} variant="fade">
                 <p className="mt-10 max-w-lg text-[17px] leading-[1.75] text-muted-foreground">
                   We engineer the platforms, applied intelligence and cloud foundations that
                   Indonesia&rsquo;s largest organisations depend on — designed for scale, held to an
@@ -136,7 +136,7 @@ function Home() {
                   </Link>
                 </div>
               </Reveal>
-              <Reveal delay={460}>
+              <Reveal delay={460} variant="fade">
                 <p className="mt-14 max-w-md border-t border-border pt-6 text-[13px] leading-[1.7] tracking-[-0.005em] text-muted-foreground">
                   Trusted across banking, logistics and energy — 40+ enterprise programmes
                   delivered, 99.98% median availability.
@@ -161,7 +161,7 @@ function Home() {
                     alt="Fusionify emblem rendered in three dimensions"
                     width={1280}
                     height={1280}
-                    className="float-3d relative h-full w-full object-contain drop-shadow-[0_48px_64px_rgba(20,26,44,0.18)]"
+                    className="float-3d media-lift relative h-full w-full object-contain drop-shadow-[0_48px_64px_rgba(20,26,44,0.18)]"
                   />
                 </div>
               </div>
@@ -180,7 +180,7 @@ function Home() {
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-8">
-            <Reveal delay={80}>
+            <Reveal delay={80} variant="fade">
               <p className="text-[1.5rem] leading-[1.45] font-medium tracking-[-0.022em] text-ink sm:text-[1.75rem]">
                 Most digital work is disposable. We build the part that isn't — the ledger, the
                 pipeline, the control plane — and we stay accountable for it long after launch.
@@ -202,9 +202,9 @@ function Home() {
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-7 lg:col-start-6">
-            <div className="grid gap-4 sm:grid-cols-2">
-              {capabilities.map((item, i) => (
-                <Reveal key={item.index} delay={i * 90} className="card-fine p-8">
+            <Stagger step={110} className="grid gap-4 sm:grid-cols-2">
+              {capabilities.map((item) => (
+                <div key={item.index} className="card-fine p-8">
                   <span className="font-display text-[12px] font-semibold tracking-[0.14em] text-primary">
                     {item.index}
                   </span>
@@ -212,9 +212,9 @@ function Home() {
                   <p className="mt-3 text-[14px] leading-[1.7] text-muted-foreground">
                     {item.body}
                   </p>
-                </Reveal>
+                </div>
               ))}
-            </div>
+            </Stagger>
           </div>
         </div>
       </section>
@@ -224,14 +224,7 @@ function Home() {
         <div className="shell">
           <div className="grid-12 gap-y-12">
             {measures.map((m, i) => (
-              <Reveal key={m.value} delay={i * 110} className="col-span-12 sm:col-span-6 lg:col-span-4">
-                <p className="font-display text-[3rem] leading-none font-extrabold tracking-[-0.04em] text-ink">
-                  {m.value}
-                </p>
-                <p className="mt-6 max-w-[17rem] text-[14px] leading-[1.7] text-muted-foreground">
-                  {m.label}
-                </p>
-              </Reveal>
+              <Measure key={m.value} value={m.value} label={m.label} delay={i * 120} />
             ))}
           </div>
         </div>
@@ -255,12 +248,12 @@ function Home() {
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-4 lg:col-start-9">
-            <Reveal delay={120}>
+            <Reveal delay={120} variant="scale">
               <img
                 src={mascot.url}
                 alt="Fi, the Fusionify mascot, holding a blank sign"
                 loading="lazy"
-                className="float-slow ml-0 h-40 w-auto object-contain lg:ml-auto"
+                className="float-slow media-lift ml-0 h-40 w-auto object-contain lg:ml-auto"
               />
             </Reveal>
           </div>
@@ -268,5 +261,20 @@ function Home() {
       </section>
 
     </>
+  );
+}
+
+function Measure({ value, label, delay }: { value: string; label: string; delay: number }) {
+  const counted = useCountUp(value);
+  return (
+    <Reveal delay={delay} variant="scale" className="col-span-12 sm:col-span-6 lg:col-span-4">
+      <p
+        ref={counted.ref}
+        className="font-display text-[3rem] leading-none font-extrabold tracking-[-0.04em] tabular-nums text-ink"
+      >
+        {counted.value}
+      </p>
+      <p className="mt-6 max-w-[17rem] text-[14px] leading-[1.7] text-muted-foreground">{label}</p>
+    </Reveal>
   );
 }
