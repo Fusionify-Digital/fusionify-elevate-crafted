@@ -24,8 +24,8 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
-const fieldClass =
-  "w-full border-0 border-b border-hairline bg-transparent pb-3 pt-2 text-[15px] text-ink outline-none transition-colors duration-500 placeholder:text-muted-foreground/70 focus:border-primary";
+const fieldClass = "field";
+
 
 function Contact() {
   const [sent, setSent] = useState(false);
