@@ -114,7 +114,7 @@ function Capabilities() {
 
       <section className="shell">
         {practices.map((p, i) => (
-          <Reveal key={p.index} delay={i * 60} className="rule-top py-14 lg:py-16">
+          <Reveal key={p.index} delay={i * 60} className="rule-top py-16 lg:py-20">
             <div className="grid-12 gap-y-6">
               <div className="col-span-12 lg:col-span-1">
                 <span className="font-display text-[12px] font-semibold tracking-[0.14em] text-primary">

@@ -31,7 +31,7 @@ function Contact() {
   const [sent, setSent] = useState(false);
 
   return (
-    <section className="shell pt-20 pb-28 lg:pt-28 lg:pb-36">
+    <section className="shell section-top">
       <div className="grid-12 gap-y-16">
         <div className="col-span-12 lg:col-span-5">
           <Reveal>
@@ -66,14 +66,14 @@ function Contact() {
         <div className="col-span-12 lg:col-span-6 lg:col-start-7">
           <Reveal delay={100}>
             <form
-              className="space-y-9"
+              className="space-y-10"
               onSubmit={(e) => {
                 e.preventDefault();
                 setSent(true);
                 toast.success("Message received. We'll reply within two working days.");
               }}
             >
-              <div className="grid gap-9 sm:grid-cols-2">
+              <div className="grid gap-10 sm:grid-cols-2">
                 <div>
                   <label htmlFor="name" className="eyebrow">
                     Name

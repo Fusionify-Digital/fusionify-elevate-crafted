@@ -51,7 +51,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <Link
             to="/contact"
-            className="hidden rounded-full bg-primary px-4 py-2 text-[13px] font-medium text-primary-foreground transition-all duration-500 hover:brightness-110 md:inline-flex"
+            className="btn btn-primary hidden h-10 px-5 text-[13px] md:inline-flex"
           >
             Start a conversation
           </Link>
