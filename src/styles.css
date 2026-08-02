@@ -101,8 +101,13 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.032em;
+    letter-spacing: -0.02em;
     color: var(--ink);
+  }
+
+  h1,
+  h2 {
+    letter-spacing: -0.035em;
   }
 
   ::selection {
