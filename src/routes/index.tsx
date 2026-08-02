@@ -130,9 +130,8 @@ function Home() {
         </div>
       </section>
 
-
       {/* Positioning statement */}
-      <section className="shell rule-top py-20 lg:py-28">
+      <section className="shell rule-top section-y">
         <div className="grid-12 gap-y-8">
           <div className="col-span-12 lg:col-span-4">
             <Reveal>
@@ -141,7 +140,7 @@ function Home() {
           </div>
           <div className="col-span-12 lg:col-span-8">
             <Reveal delay={80}>
-              <p className="text-[1.5rem] leading-[1.45] font-medium tracking-[-0.022em] text-ink sm:text-[1.85rem]">
+              <p className="text-[1.5rem] leading-[1.45] font-medium tracking-[-0.022em] text-ink sm:text-[1.75rem]">
                 Most digital work is disposable. We build the part that isn't — the ledger, the
                 pipeline, the control plane — and we stay accountable for it long after launch.
               </p>
@@ -151,29 +150,25 @@ function Home() {
       </section>
 
       {/* Capabilities */}
-      <section className="shell rule-top py-20 lg:py-28">
-        <div className="grid-12 gap-y-14">
+      <section className="shell rule-top section-y">
+        <div className="grid-12 gap-y-16">
           <div className="col-span-12 lg:col-span-4">
             <Reveal>
               <p className="eyebrow">Capabilities</p>
-              <h2 className="mt-5 text-[2rem] leading-[1.12] font-bold sm:text-[2.35rem]">
+              <h2 className="mt-6 text-[2rem] leading-[1.14] font-bold sm:text-[2.25rem]">
                 Four disciplines, one engineering standard.
               </h2>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-7 lg:col-start-6">
-            <div className="grid gap-px overflow-hidden rounded-2xl bg-hairline sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               {capabilities.map((item, i) => (
-                <Reveal
-                  key={item.index}
-                  delay={i * 90}
-                  className="group bg-background p-7 transition-colors duration-500 hover:bg-surface"
-                >
+                <Reveal key={item.index} delay={i * 90} className="card-fine p-8">
                   <span className="font-display text-[12px] font-semibold tracking-[0.14em] text-primary">
                     {item.index}
                   </span>
-                  <h3 className="mt-4 text-[17px] font-semibold">{item.title}</h3>
-                  <p className="mt-2.5 text-[14px] leading-relaxed text-muted-foreground">
+                  <h3 className="mt-6 text-[17px] font-semibold">{item.title}</h3>
+                  <p className="mt-3 text-[14px] leading-[1.7] text-muted-foreground">
                     {item.body}
                   </p>
                 </Reveal>
@@ -184,7 +179,7 @@ function Home() {
       </section>
 
       {/* Measures */}
-      <section className="rule-top bg-surface py-20 lg:py-28">
+      <section className="rule-top bg-surface section-y">
         <div className="shell">
           <div className="grid-12 gap-y-12">
             {measures.map((m, i) => (
@@ -192,7 +187,7 @@ function Home() {
                 <p className="font-display text-[3rem] leading-none font-extrabold tracking-[-0.04em] text-ink">
                   {m.value}
                 </p>
-                <p className="mt-4 max-w-[17rem] text-[14px] leading-relaxed text-muted-foreground">
+                <p className="mt-6 max-w-[17rem] text-[14px] leading-[1.7] text-muted-foreground">
                   {m.label}
                 </p>
               </Reveal>
@@ -202,40 +197,35 @@ function Home() {
       </section>
 
       {/* Closing */}
-      <section className="shell py-24 lg:py-32">
-        <div className="grid-12 items-end gap-y-8">
-          <div className="col-span-12 lg:col-span-8">
+      <section className="shell section-y">
+        <div className="grid-12 items-end gap-y-12">
+          <div className="col-span-12 lg:col-span-7">
             <Reveal>
-              <h2 className="text-[2.25rem] leading-[1.08] font-extrabold sm:text-[3rem]">
+              <h2 className="text-[2.25rem] leading-[1.08] font-extrabold sm:text-[2.75rem]">
                 Tell us what needs to hold.
               </h2>
-              <p className="mt-5 max-w-lg text-[16px] leading-[1.7] text-muted-foreground">
+              <p className="mt-6 max-w-lg text-[16px] leading-[1.75] text-muted-foreground">
                 We take on a small number of engagements each year. Conversations begin with a
                 technical review, not a sales deck.
               </p>
-            </Reveal>
-          </div>
-          <div className="col-span-12 lg:col-span-4 lg:text-right">
-            <Reveal delay={100}>
-              <img
-                src={mascot.url}
-                alt="Fi, the Fusionify mascot, holding a blank sign"
-                loading="lazy"
-                className="float-slow mb-8 ml-0 h-40 w-auto object-contain lg:ml-auto"
-              />
-            </Reveal>
-
-            <Reveal delay={120}>
-              <Link
-                to="/contact"
-                className="inline-flex rounded-full bg-primary px-6 py-3 text-[14px] font-medium text-primary-foreground transition-all duration-500 hover:brightness-110"
-              >
+              <Link to="/contact" className="btn btn-primary mt-10">
                 Contact Fusionify
               </Link>
             </Reveal>
           </div>
+          <div className="col-span-12 lg:col-span-4 lg:col-start-9">
+            <Reveal delay={120}>
+              <img
+                src={mascot.url}
+                alt="Fi, the Fusionify mascot, holding a blank sign"
+                loading="lazy"
+                className="float-slow ml-0 h-40 w-auto object-contain lg:ml-auto"
+              />
+            </Reveal>
+          </div>
         </div>
       </section>
+
     </>
   );
 }
