@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/fusionify-logo.png.asset.json";
+import mark from "@/assets/fusionify-mark.png.asset.json";
 
 export function SiteFooter() {
   return (
@@ -7,14 +7,19 @@ export function SiteFooter() {
       <div className="shell py-16 lg:py-20">
         <div className="grid-12 gap-y-12">
           <div className="col-span-12 lg:col-span-5">
-            <img
-              src={logo.url}
-              alt="Fusionify"
-              width={160}
-              height={160}
-              loading="lazy"
-              className="-ml-3 h-24 w-auto"
-            />
+            <div className="flex items-center gap-2.5">
+              <img
+                src={mark.url}
+                alt="Fusionify"
+                width={32}
+                height={32}
+                loading="lazy"
+                className="h-8 w-8"
+              />
+              <span className="font-display text-[17px] font-extrabold tracking-[-0.02em] text-ink">
+                FUSIONIFY
+              </span>
+            </div>
             <p className="mt-4 max-w-sm text-[14px] leading-relaxed text-muted-foreground">
               PT Fusionify Digital Group builds durable digital infrastructure for enterprises
               across Southeast Asia.
