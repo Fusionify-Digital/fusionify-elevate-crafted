@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroEmblem from "@/assets/hero-emblem.png";
+import mascot from "@/assets/fusionify-mascot.png.asset.json";
 import { Reveal, useParallax } from "@/components/reveal";
 
 export const Route = createFileRoute("/")({
