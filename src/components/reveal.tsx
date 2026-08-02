@@ -135,7 +135,7 @@ export function useCountUp(target: string, duration = 1600) {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const raw = match[0];
-    const decimals = raw.includes(".") ? raw.split(".")[1].length : 0;
+    const decimals = raw.includes(".") ? (raw.split(".")[1] ?? "").length : 0;
     const end = Number(raw.replace(/,/g, ""));
     if (!Number.isFinite(end)) return;
 
@@ -155,7 +155,7 @@ export function useCountUp(target: string, duration = 1600) {
   useEffect(() => {
     const m = target.match(/[\d.,]+/);
     if (!m) return;
-    const decimals = m[0].includes(".") ? m[0].split(".")[1].length : 0;
+    const decimals = m[0].includes(".") ? (m[0].split(".")[1] ?? "").length : 0;
     setValue(target.replace(m[0], (0).toFixed(decimals)));
   }, [target]);
 
