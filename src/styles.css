@@ -73,9 +73,15 @@
   --input: oklch(0.925 0.006 258);
   --ring: var(--brand);
 
-  --shadow-float: 0 40px 80px -32px color-mix(in oklab, var(--brand) 28%, transparent);
-  --shadow-card: 0 1px 2px oklch(0.2 0.02 262 / 0.04), 0 12px 32px -20px oklch(0.2 0.02 262 / 0.22);
+  /* Unified elevation — minimal, never theatrical */
+  --shadow-float: 0 32px 64px -40px oklch(0.2 0.02 262 / 0.28);
+  --shadow-hairline: 0 0 0 1px var(--hairline);
+  --shadow-card: 0 1px 1px oklch(0.2 0.02 262 / 0.03);
+  --shadow-card-hover: 0 2px 4px oklch(0.2 0.02 262 / 0.04), 0 12px 24px -16px oklch(0.2 0.02 262 / 0.16);
+  --shadow-btn: 0 1px 2px oklch(0.2 0.02 262 / 0.08);
+  --shadow-btn-hover: 0 4px 12px -4px color-mix(in oklab, var(--brand) 42%, transparent);
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+
 }
 
 @layer base {
