@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Reveal } from "@/components/reveal";
+import { Reveal, Stagger } from "@/components/reveal";
 
 export const Route = createFileRoute("/company")({
   head: () => ({
@@ -62,7 +62,7 @@ function Company() {
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-4 lg:col-start-9">
-            <Reveal delay={120}>
+            <Reveal delay={120} variant="fade">
               <p className="text-[15.5px] leading-[1.75] text-muted-foreground">
                 PT Fusionify Digital Group operates from Jakarta with a delivery presence in
                 Singapore. We are held privately and take on work we can staff with people who have
