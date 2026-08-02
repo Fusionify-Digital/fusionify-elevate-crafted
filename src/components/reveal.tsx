@@ -26,15 +26,19 @@ export function useInView<T extends HTMLElement>(threshold = 0.18) {
   return { ref, shown };
 }
 
+type RevealVariant = "rise" | "fade" | "scale" | "mask";
+
 export function Reveal({
   children,
   delay = 0,
   as: Tag = "div",
+  variant = "rise",
   className,
 }: {
   children: ReactNode;
   delay?: number;
   as?: ElementType;
+  variant?: RevealVariant;
   className?: string;
 }) {
   const { ref, shown } = useInView<HTMLDivElement>();
@@ -43,7 +47,42 @@ export function Reveal({
       ref={ref}
       data-shown={shown}
       style={{ ["--reveal-delay" as string]: `${delay}ms` }}
-      className={cn("reveal", className)}
+      className={cn("reveal", `reveal-${variant}`, className)}
+    >
+      {children}
+    </Tag>
+  );
+}
+
+/**
+ * Wraps a list of children and reveals them one after another with a shared
+ * easing curve — no per-child delay bookkeeping at the call site.
+ */
+export function Stagger({
+  children,
+  step = 90,
+  delay = 0,
+  variant = "rise",
+  as: Tag = "div",
+  className,
+}: {
+  children: ReactNode;
+  step?: number;
+  delay?: number;
+  variant?: RevealVariant;
+  as?: ElementType;
+  className?: string;
+}) {
+  const { ref, shown } = useInView<HTMLDivElement>(0.12);
+  return (
+    <Tag
+      ref={ref}
+      data-shown={shown}
+      style={{
+        ["--stagger-step" as string]: `${step}ms`,
+        ["--reveal-delay" as string]: `${delay}ms`,
+      }}
+      className={cn("stagger", `stagger-${variant}`, className)}
     >
       {children}
     </Tag>
@@ -79,4 +118,46 @@ export function useParallax<T extends HTMLElement>(strength = 0.06) {
   }, [strength]);
 
   return ref;
+}
+
+/**
+ * Counts a numeric figure up once it scrolls into view. Text around the number
+ * (%, +, " yrs") is preserved so statistics keep their editorial formatting.
+ */
+export function useCountUp(target: string, duration = 1600) {
+  const { ref, shown } = useInView<HTMLParagraphElement>(0.4);
+  const [value, setValue] = useState(target);
+
+  useEffect(() => {
+    if (!shown) return;
+    const match = target.match(/[\d.,]+/);
+    if (!match) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const raw = match[0];
+    const decimals = raw.includes(".") ? raw.split(".")[1].length : 0;
+    const end = Number(raw.replace(/,/g, ""));
+    if (!Number.isFinite(end)) return;
+
+    let frame = 0;
+    const start = performance.now();
+    const tick = (now: number) => {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 4);
+      const current = (end * eased).toFixed(decimals);
+      setValue(target.replace(raw, current));
+      if (t < 1) frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [shown, target, duration]);
+
+  useEffect(() => {
+    const m = target.match(/[\d.,]+/);
+    if (!m) return;
+    const decimals = m[0].includes(".") ? m[0].split(".")[1].length : 0;
+    setValue(target.replace(m[0], (0).toFixed(decimals)));
+  }, [target]);
+
+  return { ref, value };
 }
