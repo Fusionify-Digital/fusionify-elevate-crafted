@@ -115,7 +115,7 @@ function Contact() {
               </div>
               <button
                 type="submit"
-                className="rounded-full bg-primary px-6 py-3 text-[14px] font-medium text-primary-foreground transition-all duration-500 hover:brightness-110"
+                className="btn btn-primary"
               >
                 {sent ? "Message sent" : "Send message"}
               </button>
