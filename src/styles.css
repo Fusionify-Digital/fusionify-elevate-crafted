@@ -137,6 +137,123 @@
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: 1.5rem;
+  @media (min-width: 1024px) {
+    column-gap: 2rem;
+  }
+}
+
+/* Vertical rhythm — 8px system: 80px mobile, 128px desktop */
+@utility section-y {
+  padding-block: 5rem;
+  @media (min-width: 1024px) {
+    padding-block: 8rem;
+  }
+}
+
+@utility section-top {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  @media (min-width: 1024px) {
+    padding-top: 9rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* Buttons — one shape, one motion language */
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem;
+  padding-inline: 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  transition:
+    transform 0.4s var(--ease-premium),
+    box-shadow 0.4s var(--ease-premium),
+    background-color 0.4s var(--ease-premium),
+    border-color 0.4s var(--ease-premium),
+    color 0.4s var(--ease-premium);
+
+  &:focus-visible {
+    outline: 2px solid color-mix(in oklab, var(--brand) 55%, transparent);
+    outline-offset: 3px;
+  }
+}
+
+@utility btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-btn);
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-btn-hover);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-btn);
+  }
+}
+
+@utility btn-secondary {
+  background-color: var(--background);
+  color: var(--ink);
+  border: 1px solid var(--border);
+
+  &:hover {
+    transform: translateY(-1px);
+    border-color: color-mix(in oklab, var(--brand) 34%, var(--border));
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* Cards — thin border, whisper of shadow */
+@utility card-fine {
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background-color: var(--card);
+  box-shadow: var(--shadow-card);
+  transition:
+    border-color 0.5s var(--ease-premium),
+    box-shadow 0.5s var(--ease-premium),
+    transform 0.5s var(--ease-premium);
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in oklab, var(--brand) 26%, var(--hairline));
+    box-shadow: var(--shadow-card-hover);
+  }
+}
+
+@utility field {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  background-color: transparent;
+  padding-block: 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--ink);
+  transition:
+    border-color 0.4s var(--ease-premium),
+    box-shadow 0.4s var(--ease-premium);
+
+  &::placeholder {
+    color: color-mix(in oklab, var(--muted-foreground) 70%, transparent);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--brand);
+    box-shadow: 0 1px 0 0 var(--brand);
+  }
 }
 
 @utility eyebrow {
@@ -147,6 +264,7 @@
   text-transform: uppercase;
   color: var(--muted-foreground);
 }
+
 
 @utility rule-top {
   border-top: 1px solid var(--hairline);
