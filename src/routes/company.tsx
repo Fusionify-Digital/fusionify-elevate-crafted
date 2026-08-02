@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Reveal } from "@/components/reveal";
+import { Reveal, Stagger } from "@/components/reveal";
 
 export const Route = createFileRoute("/company")({
   head: () => ({
@@ -62,7 +62,7 @@ function Company() {
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-4 lg:col-start-9">
-            <Reveal delay={120}>
+            <Reveal delay={120} variant="fade">
               <p className="text-[15.5px] leading-[1.75] text-muted-foreground">
                 PT Fusionify Digital Group operates from Jakarta with a delivery presence in
                 Singapore. We are held privately and take on work we can staff with people who have
@@ -84,14 +84,16 @@ function Company() {
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-7 lg:col-start-6">
-            {principles.map((p, i) => (
-              <Reveal key={p.title} delay={i * 80} className="border-t border-hairline py-7 first:border-0 first:pt-0">
-                <h3 className="text-[17px] font-semibold">{p.title}</h3>
-                <p className="mt-2.5 max-w-xl text-[14.5px] leading-[1.7] text-muted-foreground">
-                  {p.body}
-                </p>
-              </Reveal>
-            ))}
+            <Stagger step={95}>
+              {principles.map((p) => (
+                <div key={p.title} className="border-t border-hairline py-7 first:border-0 first:pt-0">
+                  <h3 className="text-[17px] font-semibold">{p.title}</h3>
+                  <p className="mt-2.5 max-w-xl text-[14.5px] leading-[1.7] text-muted-foreground">
+                    {p.body}
+                  </p>
+                </div>
+              ))}
+            </Stagger>
           </div>
         </div>
       </section>
@@ -104,16 +106,17 @@ function Company() {
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-8 lg:col-start-5">
-            {timeline.map((t, i) => (
-              <Reveal
-                key={t.year}
-                delay={i * 90}
-                className="grid grid-cols-[minmax(0,1fr)] gap-1.5 border-t border-hairline py-7 sm:grid-cols-[7rem_minmax(0,1fr)] sm:gap-8"
-              >
-                <p className="font-display text-[15px] font-bold text-primary">{t.year}</p>
-                <p className="text-[14.5px] leading-[1.7] text-muted-foreground">{t.body}</p>
-              </Reveal>
-            ))}
+            <Stagger step={100}>
+              {timeline.map((t) => (
+                <div
+                  key={t.year}
+                  className="grid grid-cols-[minmax(0,1fr)] gap-1.5 border-t border-hairline py-7 sm:grid-cols-[7rem_minmax(0,1fr)] sm:gap-8"
+                >
+                  <p className="font-display text-[15px] font-bold text-primary">{t.year}</p>
+                  <p className="text-[14.5px] leading-[1.7] text-muted-foreground">{t.body}</p>
+                </div>
+              ))}
+            </Stagger>
           </div>
         </div>
       </section>

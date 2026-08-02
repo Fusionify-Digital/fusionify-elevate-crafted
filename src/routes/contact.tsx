@@ -45,7 +45,7 @@ function Contact() {
             </p>
           </Reveal>
 
-          <Reveal delay={140} className="mt-12 space-y-8">
+          <Reveal delay={140} variant="fade" className="mt-12 space-y-8">
             <div>
               <p className="eyebrow">General</p>
               <a href="mailto:hello@fusionify.id" className="link-quiet mt-2 block text-[15px]">

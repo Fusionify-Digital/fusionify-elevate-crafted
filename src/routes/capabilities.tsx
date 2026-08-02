@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Reveal } from "@/components/reveal";
+import { Reveal, Stagger } from "@/components/reveal";
 
 export const Route = createFileRoute("/capabilities")({
   head: () => ({
@@ -102,7 +102,7 @@ function Capabilities() {
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-4 lg:col-start-9">
-            <Reveal delay={120}>
+            <Reveal delay={120} variant="fade">
               <p className="text-[15.5px] leading-[1.75] text-muted-foreground">
                 We work in four practices. Most engagements draw on more than one, because the
                 hardest problems rarely sit inside a single discipline.
@@ -156,18 +156,17 @@ function Capabilities() {
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-8 lg:col-start-5">
-            <div className="space-y-px">
-              {method.map((m, i) => (
-                <Reveal
+            <Stagger step={100} className="space-y-px">
+              {method.map((m) => (
+                <div
                   key={m.step}
-                  delay={i * 90}
                   className="grid grid-cols-[minmax(0,1fr)] gap-2 border-t border-hairline py-7 sm:grid-cols-[10rem_minmax(0,1fr)] sm:gap-8"
                 >
                   <h3 className="text-[15px] font-semibold">{m.step}</h3>
                   <p className="text-[14.5px] leading-[1.7] text-muted-foreground">{m.body}</p>
-                </Reveal>
+                </div>
               ))}
-            </div>
+            </Stagger>
           </div>
         </div>
       </section>
