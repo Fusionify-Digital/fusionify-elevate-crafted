@@ -393,9 +393,12 @@
   html {
     scroll-behavior: auto;
   }
-  .float-slow {
+  .float-slow,
+  .float-3d,
+  .ground-shadow {
     animation: none;
   }
+
   .reveal {
     opacity: 1;
     transform: none;
