@@ -230,6 +230,15 @@ function Home() {
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-4 lg:text-right">
+            <Reveal delay={100}>
+              <img
+                src={mascot.url}
+                alt="Fi, the Fusionify mascot, holding a blank sign"
+                loading="lazy"
+                className="float-slow mb-8 ml-0 h-40 w-auto object-contain lg:ml-auto"
+              />
+            </Reveal>
+
             <Reveal delay={120}>
               <Link
                 to="/contact"
