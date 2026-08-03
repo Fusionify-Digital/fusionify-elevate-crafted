@@ -93,7 +93,9 @@ const products = [
   },
 ];
 
-const [lead, ...rest] = products;
+const lead = products[0]!;
+const rest = products.slice(1);
+
 
 export function Ecosystem() {
   const LeadGlyph = lead.glyph;
