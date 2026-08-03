@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroEmblem from "@/assets/hero-emblem.png";
 import mascot from "@/assets/fusionify-mascot.png.asset.json";
-import { Reveal, Stagger, useCountUp, useParallax } from "@/components/reveal";
+import { Reveal, useCountUp, useParallax } from "@/components/reveal";
+import { Ecosystem } from "@/components/ecosystem";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
