@@ -46,28 +46,8 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const capabilities = [
-  {
-    index: "01",
-    title: "Platform engineering",
-    body: "Core systems, service architecture and internal tooling built to hold weight for a decade, not a quarter.",
-  },
-  {
-    index: "02",
-    title: "Applied intelligence",
-    body: "Models placed where they change an outcome — underwriting, routing, forecasting — with evaluation built in.",
-  },
-  {
-    index: "03",
-    title: "Cloud & reliability",
-    body: "Migration, observability and incident practice that turns uptime from an aspiration into a number.",
-  },
-  {
-    index: "04",
-    title: "Product design",
-    body: "Interfaces for operators and customers alike, designed with the same rigour as the systems beneath them.",
-  },
-];
+
+
 
 const measures = [
   { value: "99.98%", label: "Median platform availability across managed workloads" },
