@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal, Stagger } from "@/components/reveal";
+import { StoryTimeline } from "@/components/story-timeline";
 
 export const Route = createFileRoute("/company")({
   head: () => ({
@@ -39,13 +40,6 @@ const principles = [
     title: "Boring where it counts",
     body: "Novelty is reserved for the problem, never for the infrastructure carrying it.",
   },
-];
-
-const timeline = [
-  { year: "2018", body: "Founded in Jakarta by four engineers from banking and logistics platforms." },
-  { year: "2020", body: "First national-scale cloud migration delivered for a regulated financial client." },
-  { year: "2023", body: "Applied intelligence practice established; Singapore delivery presence opened." },
-  { year: "2026", body: "Forty-plus enterprise programmes delivered across five industries." },
 ];
 
 function Company() {
@@ -98,28 +92,7 @@ function Company() {
         </div>
       </section>
 
-      <section className="rule-top bg-surface section-y">
-        <div className="shell grid-12 gap-y-12">
-          <div className="col-span-12 lg:col-span-3">
-            <Reveal>
-              <p className="eyebrow">Trajectory</p>
-            </Reveal>
-          </div>
-          <div className="col-span-12 lg:col-span-8 lg:col-start-5">
-            <Stagger step={100}>
-              {timeline.map((t) => (
-                <div
-                  key={t.year}
-                  className="grid grid-cols-[minmax(0,1fr)] gap-1.5 border-t border-hairline py-7 sm:grid-cols-[7rem_minmax(0,1fr)] sm:gap-8"
-                >
-                  <p className="font-display text-[15px] font-bold text-primary">{t.year}</p>
-                  <p className="text-[14.5px] leading-[1.7] text-muted-foreground">{t.body}</p>
-                </div>
-              ))}
-            </Stagger>
-          </div>
-        </div>
-      </section>
+      <StoryTimeline />
 
       <section className="shell section-y">
         <Reveal>
