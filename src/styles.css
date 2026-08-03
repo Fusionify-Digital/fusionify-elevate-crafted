@@ -265,6 +265,159 @@
   color: var(--muted-foreground);
 }
 
+/* ---- Ecosystem showcase ---- */
+
+@utility eco-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  border-radius: calc(var(--radius) + 4px);
+  background-color: var(--card);
+  padding: 2rem;
+  transition:
+    border-color 0.6s var(--ease-premium),
+    box-shadow 0.6s var(--ease-premium),
+    transform 0.6s var(--ease-premium);
+
+  @media (min-width: 1024px) {
+    padding: 2.5rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -40% -20% auto auto;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 9999px;
+    background: radial-gradient(
+      circle,
+      color-mix(in oklab, var(--brand) 9%, transparent) 0%,
+      transparent 68%
+    );
+    opacity: 0;
+    transition: opacity 0.7s var(--ease-premium);
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in oklab, var(--brand) 24%, var(--hairline));
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+@utility eco-panel-lead {
+  padding-block: 2.75rem;
+  background-color: var(--surface, var(--card));
+
+  @media (min-width: 1024px) {
+    padding: 3.5rem;
+  }
+}
+
+@utility eco-glyph-well {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 14px;
+  border: 1px solid var(--hairline);
+  color: var(--brand);
+  transition:
+    border-color 0.6s var(--ease-premium),
+    background-color 0.6s var(--ease-premium);
+
+  .group:hover & {
+    border-color: color-mix(in oklab, var(--brand) 30%, var(--hairline));
+    background-color: color-mix(in oklab, var(--brand) 5%, transparent);
+  }
+}
+
+@utility eco-glyph-well-lg {
+  width: 100%;
+  max-width: 15rem;
+  aspect-ratio: 1;
+  height: auto;
+  border-radius: calc(var(--radius) + 2px);
+  border-style: dashed;
+  border-color: color-mix(in oklab, var(--brand) 16%, var(--hairline));
+}
+
+@utility eco-glyph {
+  width: 60%;
+  height: 60%;
+  max-width: 7.5rem;
+  transition: transform 0.9s var(--ease-premium);
+
+  .group:hover & {
+    transform: rotate(-4deg) scale(1.04);
+  }
+}
+
+@utility eco-code {
+  font-family: var(--font-display, inherit);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--brand);
+}
+
+@utility eco-kind {
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+@utility eco-connect-label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+  margin-right: 0.25rem;
+}
+
+@utility eco-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 1.625rem;
+  padding-inline: 0.625rem;
+  border-radius: 9999px;
+  border: 1px solid var(--hairline);
+  font-size: 0.75rem;
+  color: var(--ink);
+  transition:
+    border-color 0.5s var(--ease-premium),
+    color 0.5s var(--ease-premium);
+
+  .group:hover & {
+    border-color: color-mix(in oklab, var(--brand) 28%, var(--hairline));
+    color: var(--brand);
+  }
+}
+
+@utility eco-spine {
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem;
+
+  & > span {
+    display: block;
+    width: 1px;
+    height: 3.5rem;
+    background: linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--brand) 40%, transparent),
+      transparent
+    );
+  }
+}
+
 
 @utility rule-top {
   border-top: 1px solid var(--hairline);

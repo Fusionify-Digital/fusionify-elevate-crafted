@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroEmblem from "@/assets/hero-emblem.png";
 import mascot from "@/assets/fusionify-mascot.png.asset.json";
-import { Reveal, Stagger, useCountUp, useParallax } from "@/components/reveal";
+import { Reveal, useCountUp, useParallax } from "@/components/reveal";
+import { Ecosystem } from "@/components/ecosystem";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -44,28 +46,8 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const capabilities = [
-  {
-    index: "01",
-    title: "Platform engineering",
-    body: "Core systems, service architecture and internal tooling built to hold weight for a decade, not a quarter.",
-  },
-  {
-    index: "02",
-    title: "Applied intelligence",
-    body: "Models placed where they change an outcome — underwriting, routing, forecasting — with evaluation built in.",
-  },
-  {
-    index: "03",
-    title: "Cloud & reliability",
-    body: "Migration, observability and incident practice that turns uptime from an aspiration into a number.",
-  },
-  {
-    index: "04",
-    title: "Product design",
-    body: "Interfaces for operators and customers alike, designed with the same rigour as the systems beneath them.",
-  },
-];
+
+
 
 const measures = [
   { value: "99.98%", label: "Median platform availability across managed workloads" },
@@ -190,34 +172,9 @@ function Home() {
         </div>
       </section>
 
-      {/* Capabilities */}
-      <section className="shell rule-top section-y">
-        <div className="grid-12 gap-y-16">
-          <div className="col-span-12 lg:col-span-4">
-            <Reveal>
-              <p className="eyebrow">Capabilities</p>
-              <h2 className="mt-6 text-[2rem] leading-[1.14] font-bold sm:text-[2.25rem]">
-                Four disciplines, one engineering standard.
-              </h2>
-            </Reveal>
-          </div>
-          <div className="col-span-12 lg:col-span-7 lg:col-start-6">
-            <Stagger step={110} className="grid gap-4 sm:grid-cols-2">
-              {capabilities.map((item) => (
-                <div key={item.index} className="card-fine p-8">
-                  <span className="font-display text-[12px] font-semibold tracking-[0.14em] text-primary">
-                    {item.index}
-                  </span>
-                  <h3 className="mt-6 text-[17px] font-semibold">{item.title}</h3>
-                  <p className="mt-3 text-[14px] leading-[1.7] text-muted-foreground">
-                    {item.body}
-                  </p>
-                </div>
-              ))}
-            </Stagger>
-          </div>
-        </div>
-      </section>
+      {/* Ecosystem */}
+      <Ecosystem />
+
 
       {/* Measures */}
       <section className="rule-top bg-surface section-y">
