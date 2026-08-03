@@ -82,9 +82,7 @@ function ChapterRow({ chapter, index }: { chapter: Chapter; index: number }) {
         </Reveal>
       </div>
 
-      <div className="col-span-12 lg:col-span-1 lg:flex lg:justify-center">
-        <span className="story-node" aria-hidden="true" />
-      </div>
+      <span className="story-node" aria-hidden="true" />
 
       <div className="col-span-12 lg:col-span-7 lg:col-start-6">
         <Reveal delay={90}>

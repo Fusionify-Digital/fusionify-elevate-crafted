@@ -735,6 +735,7 @@
 }
 
 @utility story-row {
+  position: relative;
   padding-block: 3.5rem;
   border-top: 1px solid var(--hairline);
 
@@ -744,7 +745,7 @@
   }
 
   @media (width >= 1024px) {
-    padding-block: 5.5rem;
+    padding-block: 4.5rem;
   }
 }
 
@@ -763,9 +764,12 @@
 
 @utility story-node {
   display: none;
+  position: absolute;
+  left: calc(25% + 0.5rem);
+  top: 4.9rem;
+  margin-left: -4px;
   width: 9px;
   height: 9px;
-  margin-top: 0.9rem;
   border-radius: 9999px;
   background: var(--background);
   border: 1px solid color-mix(in oklab, var(--brand) 45%, var(--hairline));
