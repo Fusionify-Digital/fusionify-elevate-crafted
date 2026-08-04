@@ -38,6 +38,7 @@
   --color-ink: var(--ink);
   --color-surface: var(--surface);
   --color-hairline: var(--hairline);
+  --color-brand: var(--brand);
 }
 
 :root {
