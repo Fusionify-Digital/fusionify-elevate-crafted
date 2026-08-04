@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal, Stagger } from "@/components/reveal";
 import { StoryTimeline } from "@/components/story-timeline";
+import { Leadership } from "@/components/leadership";
 
 export const Route = createFileRoute("/company")({
   head: () => ({
@@ -93,6 +94,9 @@ function Company() {
       </section>
 
       <StoryTimeline />
+
+      <Leadership />
+
 
       <section className="shell section-y">
         <Reveal>
