@@ -93,7 +93,7 @@ function Home() {
                 <p className="eyebrow">PT Fusionify Digital Group</p>
               </Reveal>
               <Reveal delay={120}>
-                <h1 className="mt-10 text-[2.9rem] leading-[1.02] font-extrabold tracking-[-0.03em] sm:text-[3.75rem] lg:text-[4.25rem]">
+                <h1 className="mt-6 text-[2.9rem] leading-[1.02] font-extrabold tracking-[-0.03em] sm:text-[3.75rem] lg:text-[4.25rem]">
                   Digital infrastructure
                   <br />
                   enterprises can
