@@ -152,11 +152,11 @@
 }
 
 @utility section-top {
-  padding-top: 6rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 4.5rem;
   @media (min-width: 1024px) {
-    padding-top: 9rem;
-    padding-bottom: 8rem;
+    padding-top: 4.5rem;
+    padding-bottom: 7rem;
   }
 }
 
