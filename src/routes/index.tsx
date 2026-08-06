@@ -147,17 +147,17 @@ function Home() {
 
       {/* Positioning statement */}
       <section className="shell rule-top section-y">
-        <div className="grid-12 gap-y-8">
-          <div className="col-span-12 lg:col-span-4">
+        <div className="grid-12 items-start gap-y-6">
+          <div className="col-span-12 lg:col-span-3">
             <Reveal>
               <p className="eyebrow">Position</p>
             </Reveal>
           </div>
-          <div className="col-span-12 lg:col-span-8">
+          <div className="col-span-12 lg:col-span-8 lg:col-start-5">
             <Reveal delay={80} variant="fade">
-              <p className="text-[1.5rem] leading-[1.45] font-medium tracking-[-0.022em] text-ink sm:text-[1.75rem]">
-                Most digital work is disposable. We build the part that isn't — the ledger, the
-                pipeline, the control plane — and we stay accountable for it long after launch.
+              <p className="text-[1.5rem] leading-[1.42] font-medium tracking-[-0.022em] text-ink sm:text-[1.75rem]">
+                Most digital work is disposable. We build the part that isn&rsquo;t — the ledger,
+                the pipeline, the control plane — and we stay accountable for it long after launch.
               </p>
             </Reveal>
           </div>
@@ -167,17 +167,17 @@ function Home() {
       {/* Ecosystem */}
       <Ecosystem />
 
-
       {/* Measures */}
       <section className="rule-top bg-surface section-y">
         <div className="shell">
-          <div className="grid-12 gap-y-12">
+          <div className="grid-12 gap-y-14">
             {measures.map((m, i) => (
-              <Measure key={m.value} value={m.value} label={m.label} delay={i * 120} />
+              <Measure key={m.value} value={m.value} label={m.label} delay={i * 110} />
             ))}
           </div>
         </div>
       </section>
+
 
       {/* Closing */}
       <section className="shell section-y">
