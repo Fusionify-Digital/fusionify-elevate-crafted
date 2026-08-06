@@ -266,6 +266,28 @@
   color: var(--muted-foreground);
 }
 
+@utility skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  border-radius: 9999px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.625rem 1.125rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: transform 0.35s var(--ease-premium);
+
+  &:focus-visible {
+    transform: translateY(0);
+    outline: 2px solid color-mix(in oklab, var(--brand) 55%, transparent);
+    outline-offset: 3px;
+  }
+}
+
+
 /* ---- Ecosystem showcase ---- */
 
 @utility eco-panel {
