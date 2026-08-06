@@ -70,7 +70,7 @@ function Contact() {
               onSubmit={(e) => {
                 e.preventDefault();
                 setSent(true);
-                toast.success("Message received. We'll reply within two working days.");
+                toast.success("Message received. We’ll reply within two working days.");
               }}
             >
               <div className="grid gap-10 sm:grid-cols-2">
