@@ -8,12 +8,7 @@ const navigate = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
-const ecosystem = [
-  { label: "Fusionify Core", code: "FC-01" },
-  { label: "Fusionify Signal", code: "FS-02" },
-  { label: "Fusionify Orbit", code: "FO-03" },
-  { label: "Fusionify Surface", code: "FU-04" },
-];
+const ecosystem = ["Fusionify Core", "Fusionify Signal", "Fusionify Orbit", "Fusionify Surface"];
 
 const practice = [
   "Platform engineering",
