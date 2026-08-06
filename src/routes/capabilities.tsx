@@ -147,7 +147,7 @@ function Capabilities() {
       </section>
 
 
-      <section className="rule-top mt-6 bg-surface section-y">
+      <section className="rule-top bg-surface section-y">
         <div className="shell grid-12 gap-y-12">
           <div className="col-span-12 lg:col-span-3">
             <Reveal>
