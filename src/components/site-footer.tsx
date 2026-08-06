@@ -84,14 +84,10 @@ export function SiteFooter() {
             <p className="eyebrow">Ecosystem</p>
             <ul className="mt-6 space-y-3.5 text-[14px]">
               {ecosystem.map((item) => (
-                <li
-                  key={item.code}
-                  className="flex items-baseline justify-between gap-4 text-muted-foreground"
-                >
-                  <span className="min-w-0 truncate">{item.label}</span>
-                  <span className="shrink-0 text-[11px] tracking-[0.14em] text-muted-foreground/70 uppercase">
-                    {item.code}
-                  </span>
+                <li key={item}>
+                  <Link to="/" hash="ecosystem" className="link-quiet">
+                    {item}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -99,12 +95,17 @@ export function SiteFooter() {
 
           <div className="col-span-6 lg:col-span-2">
             <p className="eyebrow">Practice</p>
-            <ul className="mt-6 space-y-3.5 text-[14px] text-muted-foreground">
+            <ul className="mt-6 space-y-3.5 text-[14px]">
               {practice.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item}>
+                  <Link to="/capabilities" className="link-quiet">
+                    {item}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
+
 
           <div className="col-span-6 lg:col-span-2">
             <p className="eyebrow">Legal</p>
