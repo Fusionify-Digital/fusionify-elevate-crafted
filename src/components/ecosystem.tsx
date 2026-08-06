@@ -57,7 +57,6 @@ function GlyphSurface() {
 const products = [
   {
     key: "core",
-    code: "FX-01",
     name: "Fusionify Core",
     kind: "Platform substrate",
     body: "The transactional spine every other product plugs into — service architecture, event pipelines and identity, run as one system of record.",
@@ -66,7 +65,6 @@ const products = [
   },
   {
     key: "signal",
-    code: "FX-02",
     name: "Fusionify Signal",
     kind: "Applied intelligence",
     body: "Models placed against a decision that already exists inside Core — underwriting, routing, forecasting — with evaluation wired in from day one.",
@@ -75,7 +73,6 @@ const products = [
   },
   {
     key: "orbit",
-    code: "FX-03",
     name: "Fusionify Orbit",
     kind: "Cloud & reliability",
     body: "Landing zones, observability and incident practice. Every product in the ecosystem reports its uptime through the same instrument.",
@@ -84,7 +81,6 @@ const products = [
   },
   {
     key: "surface",
-    code: "FX-04",
     name: "Fusionify Surface",
     kind: "Product & interface",
     body: "Operator consoles and customer interfaces drawn from one design system, so a person moving between products never has to relearn anything.",
@@ -96,7 +92,6 @@ const products = [
 const lead = products[0]!;
 const rest = products.slice(1);
 
-
 export function Ecosystem() {
   const LeadGlyph = lead.glyph;
 
@@ -104,7 +99,7 @@ export function Ecosystem() {
     <section id="ecosystem" className="rule-top section-y">
       <div className="shell">
         {/* Header */}
-        <div className="grid-12 gap-y-8">
+        <div className="grid-12 items-end gap-y-8">
           <div className="col-span-12 lg:col-span-5">
             <Reveal>
               <p className="eyebrow">The Fusionify Ecosystem</p>
@@ -117,7 +112,7 @@ export function Ecosystem() {
           </div>
           <div className="col-span-12 lg:col-span-5 lg:col-start-8">
             <Reveal delay={110} variant="fade">
-              <p className="text-[15.5px] leading-[1.75] text-muted-foreground">
+              <p className="text-[15.5px] leading-[1.72] text-muted-foreground">
                 Nothing here is sold as an isolated service. Each product assumes the others exist —
                 shared identity, shared telemetry, shared interface language — so what you adopt
                 second costs less than what you adopted first.
@@ -130,20 +125,17 @@ export function Ecosystem() {
         <Reveal delay={80} className="mt-16 lg:mt-20">
           <article className="eco-panel eco-panel-lead group">
             <div className="grid-12 items-center gap-y-10">
-              <div className="col-span-12 lg:col-span-5">
+              <div className="col-span-12 lg:col-span-4">
                 <div className="eco-glyph-well eco-glyph-well-lg">
                   <LeadGlyph />
                 </div>
               </div>
-              <div className="col-span-12 lg:col-span-6 lg:col-start-7">
-                <div className="flex items-center gap-3">
-                  <span className="eco-code">{lead.code}</span>
-                  <span className="eco-kind">{lead.kind}</span>
-                </div>
-                <h3 className="mt-6 text-[1.75rem] leading-[1.15] font-bold tracking-[-0.02em] sm:text-[2rem]">
+              <div className="col-span-12 lg:col-span-7 lg:col-start-6">
+                <p className="eco-kind">{lead.kind}</p>
+                <h3 className="mt-5 text-[1.75rem] leading-[1.15] font-bold tracking-[-0.02em] sm:text-[2rem]">
                   {lead.name}
                 </h3>
-                <p className="mt-4 max-w-md text-[15px] leading-[1.75] text-muted-foreground">
+                <p className="mt-4 max-w-[36rem] text-[15px] leading-[1.72] text-muted-foreground">
                   {lead.body}
                 </p>
                 <Connects to={lead.connects} />
@@ -153,41 +145,37 @@ export function Ecosystem() {
         </Reveal>
 
         {/* Connective spine */}
-        <Reveal variant="fade" className="eco-spine" aria-hidden="true">
+        <div className="eco-spine" aria-hidden="true">
           <span />
-        </Reveal>
+        </div>
 
-        {/* Supporting products — varied column weights, never a uniform grid */}
+        {/* Supporting products */}
         <Stagger step={120} className="grid gap-4 lg:grid-cols-12">
           {rest.map((p, i) => {
             const Glyph = p.glyph;
-            const span =
-              i === 0 ? "lg:col-span-7" : i === 1 ? "lg:col-span-5" : "lg:col-span-12";
+            const span = i === 0 ? "lg:col-span-7" : i === 1 ? "lg:col-span-5" : "lg:col-span-12";
             return (
-              <article key={p.key} className={`eco-panel group ${span}`}>
-                <div className={i === 2 ? "grid-12 items-center gap-y-8" : undefined}>
-                  <div className={i === 2 ? "col-span-12 lg:col-span-7" : undefined}>
-                    <div className="flex items-start justify-between gap-6">
-                      <div>
-                        <div className="flex items-center gap-3">
-                          <span className="eco-code">{p.code}</span>
-                          <span className="eco-kind">{p.kind}</span>
-                        </div>
-                        <h3 className="mt-5 text-[1.25rem] leading-[1.2] font-semibold tracking-[-0.015em]">
-                          {p.name}
-                        </h3>
-                      </div>
-                      <div className="eco-glyph-well shrink-0">
-                        <Glyph />
-                      </div>
-                    </div>
-                    <p className="mt-4 max-w-md text-[14.5px] leading-[1.72] text-muted-foreground">
-                      {p.body}
-                    </p>
+              <article key={p.key} className={`eco-panel group flex flex-col ${span}`}>
+                <div className="flex items-start justify-between gap-8">
+                  <div className="min-w-0">
+                    <p className="eco-kind">{p.kind}</p>
+                    <h3 className="mt-4 text-[1.25rem] leading-[1.2] font-semibold tracking-[-0.015em]">
+                      {p.name}
+                    </h3>
                   </div>
-                  <div className={i === 2 ? "col-span-12 lg:col-span-4 lg:col-start-9" : undefined}>
-                    <Connects to={p.connects} />
+                  <div className="eco-glyph-well shrink-0">
+                    <Glyph />
                   </div>
+                </div>
+                <p
+                  className={`mt-4 text-[14.5px] leading-[1.72] text-muted-foreground ${
+                    i === 2 ? "max-w-[46rem]" : "max-w-[30rem]"
+                  }`}
+                >
+                  {p.body}
+                </p>
+                <div className="mt-auto">
+                  <Connects to={p.connects} />
                 </div>
               </article>
             );
@@ -197,7 +185,7 @@ export function Ecosystem() {
         {/* Ecosystem close */}
         <Reveal delay={60} variant="fade">
           <div className="mt-14 grid-12 items-center gap-y-6 border-t border-hairline pt-10">
-            <p className="col-span-12 max-w-xl text-[15px] leading-[1.75] text-muted-foreground lg:col-span-7">
+            <p className="col-span-12 max-w-xl text-[15px] leading-[1.72] text-muted-foreground lg:col-span-7">
               Most organisations start with one product and inherit the rest as they grow. The
               ecosystem is designed for exactly that sequence.
             </p>
@@ -215,13 +203,9 @@ export function Ecosystem() {
 
 function Connects({ to }: { to: string[] }) {
   return (
-    <div className="mt-7 flex flex-wrap items-center gap-x-2 gap-y-2">
-      <span className="eco-connect-label">Connects to</span>
-      {to.map((name) => (
-        <span key={name} className="eco-chip">
-          {name}
-        </span>
-      ))}
-    </div>
+    <p className="eco-relations mt-8">
+      Works with <span>{to.join(", ")}</span>
+    </p>
   );
 }
+
