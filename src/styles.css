@@ -341,13 +341,14 @@
 
 @utility eco-glyph-well-lg {
   width: 100%;
-  max-width: 15rem;
+  max-width: 13.5rem;
   aspect-ratio: 1;
   height: auto;
   border-radius: calc(var(--radius) + 2px);
-  border-style: dashed;
-  border-color: color-mix(in oklab, var(--brand) 16%, var(--hairline));
+  border-color: var(--hairline);
+  background-color: color-mix(in oklab, var(--brand) 3%, transparent);
 }
+
 
 @utility eco-glyph {
   width: 60%;

@@ -27,7 +27,7 @@ const social = [
 
 export function SiteFooter() {
   return (
-    <footer className="rule-top mt-32 bg-surface">
+    <footer className="rule-top bg-surface">
       <div className="shell py-20 lg:py-28">
         {/* Masthead */}
         <div className="grid-12 gap-y-10">
