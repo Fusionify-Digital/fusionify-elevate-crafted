@@ -114,29 +114,28 @@ function Capabilities() {
 
       <section className="shell">
         {practices.map((p, i) => (
-          <Reveal key={p.index} delay={i * 60} className="rule-top py-16 lg:py-20">
-            <div className="grid-12 gap-y-6">
+          <Reveal key={p.index} delay={i * 60} className="rule-top py-14 lg:py-20">
+            <div className="grid-12 items-start gap-y-8">
               <div className="col-span-12 lg:col-span-1">
                 <span className="font-display text-[12px] font-semibold tracking-[0.14em] text-primary">
                   {p.index}
                 </span>
               </div>
-              <div className="col-span-12 lg:col-span-5">
+              <div className="col-span-12 lg:col-span-5 lg:col-start-2">
                 <h2 className="text-[1.65rem] leading-[1.15] font-bold sm:text-[1.9rem]">
                   {p.title}
                 </h2>
-                <p className="mt-3 max-w-sm text-[15px] leading-relaxed text-muted-foreground">
+                <p className="mt-3 max-w-sm text-[15px] leading-[1.7] text-muted-foreground">
                   {p.lead}
                 </p>
               </div>
               <div className="col-span-12 lg:col-span-5 lg:col-start-8">
-                <ul className="space-y-3.5">
+                <ul>
                   {p.points.map((point) => (
                     <li
                       key={point}
-                      className="flex gap-3.5 border-b border-hairline pb-3.5 text-[14.5px] text-foreground last:border-0"
+                      className="border-b border-hairline py-3.5 text-[14.5px] leading-[1.6] text-foreground first:pt-0 last:border-0 last:pb-0"
                     >
-                      <span className="mt-[9px] h-[3px] w-[3px] shrink-0 rounded-full bg-primary" />
                       {point}
                     </li>
                   ))}
@@ -147,7 +146,8 @@ function Capabilities() {
         ))}
       </section>
 
-      <section className="rule-top mt-6 bg-surface section-y">
+
+      <section className="rule-top bg-surface section-y">
         <div className="shell grid-12 gap-y-12">
           <div className="col-span-12 lg:col-span-3">
             <Reveal>

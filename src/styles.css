@@ -266,6 +266,28 @@
   color: var(--muted-foreground);
 }
 
+@utility skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  border-radius: 9999px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.625rem 1.125rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: transform 0.35s var(--ease-premium);
+
+  &:focus-visible {
+    transform: translateY(0);
+    outline: 2px solid color-mix(in oklab, var(--brand) 55%, transparent);
+    outline-offset: 3px;
+  }
+}
+
+
 /* ---- Ecosystem showcase ---- */
 
 @utility eco-panel {
@@ -341,13 +363,14 @@
 
 @utility eco-glyph-well-lg {
   width: 100%;
-  max-width: 15rem;
+  max-width: 13.5rem;
   aspect-ratio: 1;
   height: auto;
   border-radius: calc(var(--radius) + 2px);
-  border-style: dashed;
-  border-color: color-mix(in oklab, var(--brand) 16%, var(--hairline));
+  border-color: var(--hairline);
+  background-color: color-mix(in oklab, var(--brand) 3%, transparent);
 }
+
 
 @utility eco-glyph {
   width: 60%;
@@ -360,14 +383,6 @@
   }
 }
 
-@utility eco-code {
-  font-family: var(--font-display, inherit);
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  color: var(--brand);
-}
-
 @utility eco-kind {
   font-size: 0.6875rem;
   letter-spacing: 0.14em;
@@ -375,32 +390,21 @@
   color: var(--muted-foreground);
 }
 
-@utility eco-connect-label {
-  font-size: 0.6875rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+@utility eco-relations {
+  font-size: 0.8125rem;
+  line-height: 1.6;
   color: var(--muted-foreground);
-  margin-right: 0.25rem;
-}
 
-@utility eco-chip {
-  display: inline-flex;
-  align-items: center;
-  height: 1.625rem;
-  padding-inline: 0.625rem;
-  border-radius: 9999px;
-  border: 1px solid var(--hairline);
-  font-size: 0.75rem;
-  color: var(--ink);
-  transition:
-    border-color 0.5s var(--ease-premium),
-    color 0.5s var(--ease-premium);
+  & > span {
+    color: var(--ink);
+    transition: color 0.5s var(--ease-premium);
+  }
 
-  .group:hover & {
-    border-color: color-mix(in oklab, var(--brand) 28%, var(--hairline));
+  .group:hover & > span {
     color: var(--brand);
   }
 }
+
 
 @utility eco-spine {
   display: flex;
