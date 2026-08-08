@@ -150,7 +150,7 @@ export function SiteFooter() {
         {/* Baseline */}
         <div className="rule-top mt-16 flex flex-col gap-3 pt-8 text-[12.5px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} PT Fusionify Digital Group. All rights reserved.</p>
-          <p className="tracking-[0.14em] uppercase">Jakarta · Singapore</p>
+          <p className="tracking-[0.14em] uppercase">Digital Technology Company · Jakarta</p>
         </div>
       </div>
     </footer>
