@@ -10,13 +10,15 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Speak with the Fusionify engineering team in Jakarta. Conversations begin with a technical review, not a sales deck.",
+          "Contact PT Fusionify Digital Group in Jakarta about automation, payment technology, cloud services or custom software.",
       },
       { property: "og:title", content: "Contact — PT Fusionify Digital Group" },
       {
         property: "og:description",
-        content: "Reach the Fusionify engineering team in Jakarta and Singapore.",
+        content: "Reach the Fusionify team in Jakarta about the ecosystem or a custom engagement.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
