@@ -8,13 +8,13 @@ const navigate = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
-const ecosystem = ["Fusionify Core", "Fusionify Signal", "Fusionify Orbit", "Fusionify Surface"];
+const ecosystem = ["Fusionify Bot", "FTV Pay", "Fusionify Solutions", "FTV Injector"];
 
 const practice = [
-  "Platform engineering",
-  "Applied intelligence",
-  "Cloud & reliability",
-  "Product design",
+  "Digital infrastructure",
+  "Automation & AI",
+  "Payment technology",
+  "Software & product",
 ];
 
 const legal = ["Privacy notice", "Terms of engagement", "Security posture", "Accessibility"];
