@@ -11,32 +11,32 @@ type Chapter = {
 
 const chapters: Chapter[] = [
   {
-    year: "2018",
+    year: "01",
     label: "Chapter one",
-    title: "Four engineers, one rented floor in Jakarta.",
-    body: "Fusionify began with people who had already carried banking and logistics platforms through production. The first agreement was written on the premise that we would only take work we could staff ourselves.",
-    marker: "Founded",
+    title: "It started with automation.",
+    body: "Fusionify Bot was built to run digital commerce operations that people were doing by hand — orders, resellers, payments and reporting across Telegram and WhatsApp. Volume made the requirement obvious: the infrastructure underneath had to be treated as a product.",
+    marker: "Fusionify Bot",
   },
   {
-    year: "2020",
+    year: "02",
     label: "Chapter two",
-    title: "A regulated migration that had to hold.",
-    body: "Our first national-scale cloud programme moved a financial institution without a single unplanned outage window. It set the standard we still measure delivery against: stability in production, not milestones on paper.",
-    marker: "First national programme",
+    title: "Payments became the second layer.",
+    body: "Automated commerce is only as reliable as the money movement behind it. FTV Pay was built as payment infrastructure — collection, disbursement, settlement and reconciliation — first for our own platform, then for the organisations building on it.",
+    marker: "FTV Pay",
   },
   {
-    year: "2023",
+    year: "03",
     label: "Chapter three",
-    title: "Intelligence, applied where it earns its keep.",
-    body: "We formalised an applied intelligence practice and opened a delivery presence in Singapore — closer to the regulators, the data, and the teams who would run the systems after we left.",
-    marker: "Practice established",
+    title: "The engineering practice opened.",
+    body: "Clients asked for the systems, not just the products. Fusionify Solutions formalised that work: enterprise software, web and mobile applications, AI integration, UI/UX and consulting, delivered on the same foundations we run ourselves.",
+    marker: "Fusionify Solutions",
   },
   {
-    year: "2026",
+    year: "04",
     label: "Chapter four",
-    title: "A digital technology group with a record.",
-    body: "Forty-plus enterprise programmes across five industries, an ecosystem of interconnected products, and the same operating rule as the first year: fewer, more senior people, accountable to the outcome.",
-    marker: "Today",
+    title: "A technology group, not a software house.",
+    body: "With FTV Injector covering network and connectivity, the four products now operate as one ecosystem under PT Fusionify Digital Group — a company whose output is long-term digital infrastructure rather than one-off delivery.",
+    marker: "PT Fusionify Digital Group",
   },
 ];
 
@@ -113,15 +113,15 @@ export function StoryTimeline() {
             <Reveal>
               <p className="eyebrow">Trajectory</p>
               <h2 className="mt-5 text-[2rem] leading-[1.12] font-bold">
-                Eight years, told in four chapters.
+                How the ecosystem was built.
               </h2>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-5 lg:col-start-8 lg:self-end">
             <Reveal delay={120} variant="fade">
               <p className="text-[15px] leading-[1.8] text-muted-foreground">
-                The company changed shape more than once. What did not change is who does the work
-                and how far we stay with it.
+                Each product exists because the one before it needed something that did not yet
+                exist. That order is why the ecosystem holds together.
               </p>
             </Reveal>
           </div>

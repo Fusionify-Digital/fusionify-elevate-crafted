@@ -8,13 +8,13 @@ const navigate = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
-const ecosystem = ["Fusionify Core", "Fusionify Signal", "Fusionify Orbit", "Fusionify Surface"];
+const ecosystem = ["Fusionify Bot", "FTV Pay", "Fusionify Solutions", "FTV Injector"];
 
 const practice = [
-  "Platform engineering",
-  "Applied intelligence",
-  "Cloud & reliability",
-  "Product design",
+  "Digital infrastructure",
+  "Automation & AI",
+  "Payment technology",
+  "Software & product",
 ];
 
 const legal = ["Privacy notice", "Terms of engagement", "Security posture", "Accessibility"];
@@ -46,8 +46,9 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="mt-6 max-w-sm text-[15px] leading-[1.75] text-muted-foreground">
-              PT Fusionify Digital Group builds durable digital infrastructure for enterprises
-              across Southeast Asia — engineered to stay dependable for a decade.
+              PT Fusionify Digital Group is a digital technology company building scalable digital
+              infrastructure, automation, AI-powered solutions, cloud services, payment technology
+              and business software.
             </p>
           </div>
 
@@ -149,7 +150,7 @@ export function SiteFooter() {
         {/* Baseline */}
         <div className="rule-top mt-16 flex flex-col gap-3 pt-8 text-[12.5px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} PT Fusionify Digital Group. All rights reserved.</p>
-          <p className="tracking-[0.14em] uppercase">Jakarta · Singapore</p>
+          <p className="tracking-[0.14em] uppercase">Digital Technology Company · Jakarta</p>
         </div>
       </div>
     </footer>

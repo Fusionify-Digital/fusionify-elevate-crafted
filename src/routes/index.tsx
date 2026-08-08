@@ -8,21 +8,23 @@ import { Ecosystem } from "@/components/ecosystem";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Fusionify — Digital infrastructure for enterprises in Indonesia" },
+      { title: "PT Fusionify Digital Group — Digital technology company" },
       {
         name: "description",
         content:
-          "PT Fusionify Digital Group designs and engineers platforms, applied intelligence and cloud reliability for Indonesia's most demanding enterprises.",
+          "PT Fusionify Digital Group builds scalable digital infrastructure, automation, AI-powered solutions, cloud services, payment technology and business software.",
       },
       {
         property: "og:title",
-        content: "Fusionify — Digital infrastructure for enterprises in Indonesia",
+        content: "PT Fusionify Digital Group — Digital technology company",
       },
       {
         property: "og:description",
         content:
-          "Platform engineering, applied intelligence and cloud reliability, delivered with enterprise discipline.",
+          "An ecosystem of automation, payment and engineering products: Fusionify Bot, FTV Pay, Fusionify Solutions and FTV Injector.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -34,6 +36,8 @@ export const Route = createFileRoute("/")({
           "@type": "Organization",
           name: "PT Fusionify Digital Group",
           url: "/",
+          description:
+            "Digital technology company building scalable digital infrastructure, automation, AI-powered solutions, cloud services, payment technology and business software.",
           address: {
             "@type": "PostalAddress",
             addressLocality: "Jakarta Selatan",
@@ -50,9 +54,9 @@ export const Route = createFileRoute("/")({
 
 
 const measures = [
-  { value: "99.98%", label: "Median platform availability across managed workloads" },
-  { value: "11 yrs", label: "Average engineering tenure across our principal staff" },
-  { value: "40+", label: "Enterprise programmes delivered in banking, logistics and energy" },
+  { value: "4", label: "Products operating as one connected technology ecosystem" },
+  { value: "24/7", label: "Automation and payment services running without a maintenance window" },
+  { value: "99.9%", label: "Median availability targeted across managed workloads" },
 ];
 
 function Home() {
@@ -86,16 +90,16 @@ function Home() {
                 <h1 className="mt-6 text-[2.6rem] leading-[1.04] font-extrabold tracking-[-0.032em] sm:text-[3.5rem] lg:text-[4rem]">
                   Digital infrastructure
                   <br />
-                  enterprises can
+                  built to run
                   <br />
-                  <span className="text-primary">trust for decades.</span>
+                  <span className="text-primary">for the long term.</span>
                 </h1>
               </Reveal>
               <Reveal delay={210} variant="fade">
                 <p className="mt-8 max-w-[34rem] text-[16.5px] leading-[1.72] text-muted-foreground">
-                  We engineer the platforms, applied intelligence and cloud foundations that
-                  Indonesia&rsquo;s largest organisations depend on — designed for scale, held to an
-                  enterprise standard, and accountable long after launch.
+                  Fusionify builds scalable digital infrastructure, automation, AI-powered
+                  solutions, cloud services, payment technology and business software — delivered as
+                  one connected ecosystem rather than isolated projects.
                 </p>
               </Reveal>
               <Reveal delay={310}>
@@ -110,8 +114,7 @@ function Home() {
               </Reveal>
               <Reveal delay={400} variant="fade">
                 <p className="mt-12 max-w-[30rem] border-t border-hairline pt-6 text-[13px] leading-[1.7] text-muted-foreground">
-                  Trusted across banking, logistics and energy — 40+ enterprise programmes
-                  delivered, 99.98% median availability.
+                  Fusionify Bot · FTV Pay · Fusionify Solutions · FTV Injector
                 </p>
               </Reveal>
             </div>
@@ -156,8 +159,10 @@ function Home() {
           <div className="col-span-12 lg:col-span-8 lg:col-start-5">
             <Reveal delay={80} variant="fade">
               <p className="text-[1.5rem] leading-[1.42] font-medium tracking-[-0.022em] text-ink sm:text-[1.75rem]">
-                Most digital work is disposable. We build the part that isn&rsquo;t — the ledger,
-                the pipeline, the control plane — and we stay accountable for it long after launch.
+                PT Fusionify Digital Group is a digital technology company, not a software house.
+                We build and operate the infrastructure our own products depend on — automation,
+                payments, cloud and applied AI — and make it available to the organisations we work
+                with.
               </p>
             </Reveal>
           </div>
@@ -185,11 +190,11 @@ function Home() {
           <div className="col-span-12 lg:col-span-7">
             <Reveal>
               <h2 className="text-[2.25rem] leading-[1.08] font-extrabold sm:text-[2.75rem]">
-                Tell us what needs to hold.
+                Tell us what you need to run.
               </h2>
               <p className="mt-6 max-w-lg text-[16px] leading-[1.75] text-muted-foreground">
-                We take on a small number of engagements each year. Conversations begin with a
-                technical review, not a sales deck.
+                Whether it starts with automation, payments or a system that has to be rebuilt,
+                conversations begin with a technical review rather than a sales deck.
               </p>
               <Link to="/contact" className="btn btn-primary mt-10">
                 Contact Fusionify

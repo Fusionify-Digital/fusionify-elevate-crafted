@@ -10,13 +10,15 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Speak with the Fusionify engineering team in Jakarta. Conversations begin with a technical review, not a sales deck.",
+          "Contact PT Fusionify Digital Group in Jakarta about automation, payment technology, cloud services or custom software.",
       },
       { property: "og:title", content: "Contact — PT Fusionify Digital Group" },
       {
         property: "og:description",
-        content: "Reach the Fusionify engineering team in Jakarta and Singapore.",
+        content: "Reach the Fusionify team in Jakarta about the ecosystem or a custom engagement.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
@@ -40,8 +42,8 @@ function Contact() {
               Start with the hard part.
             </h1>
             <p className="mt-6 max-w-sm text-[15.5px] leading-[1.75] text-muted-foreground">
-              Tell us what is fragile, slow or unowned. A principal engineer reads every message and
-              replies within two working days.
+              Tell us what you need automated, paid out, migrated or rebuilt. An engineer reads
+              every message and replies within two working days.
             </p>
           </Reveal>
 

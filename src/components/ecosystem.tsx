@@ -56,36 +56,36 @@ function GlyphSurface() {
 
 const products = [
   {
-    key: "core",
-    name: "Fusionify Core",
-    kind: "Platform substrate",
-    body: "The transactional spine every other product plugs into — service architecture, event pipelines and identity, run as one system of record.",
+    key: "bot",
+    name: "Fusionify Bot",
+    kind: "Automation platform",
+    body: "Telegram and WhatsApp automation for digital commerce — reseller management, order and payment automation, analytics and day-to-day business operations, run from one control plane.",
     glyph: GlyphCore,
-    connects: ["Signal", "Orbit", "Surface"],
+    connects: ["FTV Pay", "Fusionify Solutions"],
   },
   {
-    key: "signal",
-    name: "Fusionify Signal",
-    kind: "Applied intelligence",
-    body: "Models placed against a decision that already exists inside Core — underwriting, routing, forecasting — with evaluation wired in from day one.",
+    key: "pay",
+    name: "FTV Pay",
+    kind: "Payment infrastructure",
+    body: "A payment gateway and digital payment infrastructure handling collection, disbursement, settlement and reconciliation for the products and clients built on the ecosystem.",
     glyph: GlyphSignal,
-    connects: ["Core", "Orbit"],
+    connects: ["Fusionify Bot", "Fusionify Solutions"],
   },
   {
-    key: "orbit",
-    name: "Fusionify Orbit",
-    kind: "Cloud & reliability",
-    body: "Landing zones, observability and incident practice. Every product in the ecosystem reports its uptime through the same instrument.",
-    glyph: GlyphOrbit,
-    connects: ["Core", "Surface"],
-  },
-  {
-    key: "surface",
-    name: "Fusionify Surface",
-    kind: "Product & interface",
-    body: "Operator consoles and customer interfaces drawn from one design system, so a person moving between products never has to relearn anything.",
+    key: "solutions",
+    name: "Fusionify Solutions",
+    kind: "Engineering practice",
+    body: "Custom software, enterprise systems, web and mobile applications, automation, AI integration, UI/UX and consulting — delivered on the same foundations that carry our own products.",
     glyph: GlyphSurface,
-    connects: ["Core", "Signal"],
+    connects: ["Fusionify Bot", "FTV Pay", "FTV Injector"],
+  },
+  {
+    key: "injector",
+    name: "FTV Injector",
+    kind: "Network technology",
+    body: "Network utility and VPN technology for connectivity, tunnelling and secure access — the transport layer beneath products that have to work on constrained networks.",
+    glyph: GlyphOrbit,
+    connects: ["Fusionify Solutions"],
   },
 ];
 
@@ -106,16 +106,17 @@ export function Ecosystem() {
               <h2 className="mt-6 text-[2rem] leading-[1.12] font-bold tracking-[-0.025em] sm:text-[2.4rem]">
                 Four products.
                 <br />
-                One continuous system.
+                One connected ecosystem.
               </h2>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-5 lg:col-start-8">
             <Reveal delay={110} variant="fade">
               <p className="text-[15.5px] leading-[1.72] text-muted-foreground">
-                Nothing here is sold as an isolated service. Each product assumes the others exist —
-                shared identity, shared telemetry, shared interface language — so what you adopt
-                second costs less than what you adopted first.
+                Fusionify is not a software house with a product list. Automation, payments,
+                engineering and network technology are built as one long-term system — shared
+                identity, shared payment rails, shared interface language — so each product an
+                organisation adopts makes the next one cheaper to run.
               </p>
             </Reveal>
           </div>
@@ -186,8 +187,8 @@ export function Ecosystem() {
         <Reveal delay={60} variant="fade">
           <div className="mt-14 grid-12 items-center gap-y-6 border-t border-hairline pt-10">
             <p className="col-span-12 max-w-xl text-[15px] leading-[1.72] text-muted-foreground lg:col-span-7">
-              Most organisations start with one product and inherit the rest as they grow. The
-              ecosystem is designed for exactly that sequence.
+              Most organisations start with automation or payments and inherit the rest as they
+              grow. The ecosystem is designed for exactly that sequence.
             </p>
             <div className="col-span-12 lg:col-span-4 lg:col-start-9 lg:justify-self-end">
               <Link to="/capabilities" className="btn btn-secondary">
