@@ -113,15 +113,15 @@ export function StoryTimeline() {
             <Reveal>
               <p className="eyebrow">Trajectory</p>
               <h2 className="mt-5 text-[2rem] leading-[1.12] font-bold">
-                Eight years, told in four chapters.
+                How the ecosystem was built.
               </h2>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-5 lg:col-start-8 lg:self-end">
             <Reveal delay={120} variant="fade">
               <p className="text-[15px] leading-[1.8] text-muted-foreground">
-                The company changed shape more than once. What did not change is who does the work
-                and how far we stay with it.
+                Each product exists because the one before it needed something that did not yet
+                exist. That order is why the ecosystem holds together.
               </p>
             </Reveal>
           </div>
