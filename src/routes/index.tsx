@@ -159,8 +159,10 @@ function Home() {
           <div className="col-span-12 lg:col-span-8 lg:col-start-5">
             <Reveal delay={80} variant="fade">
               <p className="text-[1.5rem] leading-[1.42] font-medium tracking-[-0.022em] text-ink sm:text-[1.75rem]">
-                Most digital work is disposable. We build the part that isn&rsquo;t — the ledger,
-                the pipeline, the control plane — and we stay accountable for it long after launch.
+                PT Fusionify Digital Group is a digital technology company, not a software house.
+                We build and operate the infrastructure our own products depend on — automation,
+                payments, cloud and applied AI — and make it available to the organisations we work
+                with.
               </p>
             </Reveal>
           </div>
