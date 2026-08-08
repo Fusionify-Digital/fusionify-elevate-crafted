@@ -46,8 +46,9 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="mt-6 max-w-sm text-[15px] leading-[1.75] text-muted-foreground">
-              PT Fusionify Digital Group builds durable digital infrastructure for enterprises
-              across Southeast Asia — engineered to stay dependable for a decade.
+              PT Fusionify Digital Group is a digital technology company building scalable digital
+              infrastructure, automation, AI-powered solutions, cloud services, payment technology
+              and business software.
             </p>
           </div>
 
