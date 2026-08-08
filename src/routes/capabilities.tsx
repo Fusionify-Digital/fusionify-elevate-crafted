@@ -4,17 +4,19 @@ import { Reveal, Stagger } from "@/components/reveal";
 export const Route = createFileRoute("/capabilities")({
   head: () => ({
     meta: [
-      { title: "Capabilities — Fusionify Digital Group" },
+      { title: "Capabilities — PT Fusionify Digital Group" },
       {
         name: "description",
         content:
-          "Platform engineering, applied intelligence, cloud reliability and product design, delivered by a senior Indonesian engineering group.",
+          "Digital infrastructure, automation and AI, payment technology and custom software engineering from PT Fusionify Digital Group.",
       },
-      { property: "og:title", content: "Capabilities — Fusionify Digital Group" },
+      { property: "og:title", content: "Capabilities — PT Fusionify Digital Group" },
       {
         property: "og:description",
-        content: "How Fusionify engineers durable platforms for enterprise clients.",
+        content: "How Fusionify builds and operates long-term digital infrastructure.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/capabilities" },
     ],
     links: [{ rel: "canonical", href: "/capabilities" }],
