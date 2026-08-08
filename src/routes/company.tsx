@@ -10,13 +10,15 @@ export const Route = createFileRoute("/company")({
       {
         name: "description",
         content:
-          "PT Fusionify Digital Group is a Jakarta-based engineering group building durable digital infrastructure for enterprises across Southeast Asia.",
+          "PT Fusionify Digital Group is a digital technology company building automation, payment technology, cloud services and business software as one long-term ecosystem.",
       },
       { property: "og:title", content: "Company — PT Fusionify Digital Group" },
       {
         property: "og:description",
-        content: "Who we are, how we hire, and the principles we hold to.",
+        content: "Our mission, principles and how the Fusionify ecosystem came together.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/company" },
     ],
     links: [{ rel: "canonical", href: "/company" }],
@@ -26,12 +28,12 @@ export const Route = createFileRoute("/company")({
 
 const principles = [
   {
-    title: "Write it down",
-    body: "Every consequential decision leaves a record. Institutional memory should outlive the people who created it.",
+    title: "Build it as infrastructure",
+    body: "Anything we ship is assumed to run for years. That standard applies to a bot workflow and a payment rail equally.",
   },
   {
-    title: "Small and senior",
-    body: "We staff engagements with fewer, more experienced people. Coordination cost is the tax nobody budgets for.",
+    title: "One ecosystem, not a portfolio",
+    body: "Products share identity, payment rails and interface language, so adopting a second one costs less than the first.",
   },
   {
     title: "Own the outcome",
@@ -52,16 +54,17 @@ function Company() {
             <Reveal>
               <p className="eyebrow">Company</p>
               <h1 className="mt-6 text-[2.75rem] leading-[1.05] font-extrabold sm:text-[3.5rem]">
-                An engineering group, not an agency.
+                A digital technology company.
               </h1>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-4 lg:col-start-9">
             <Reveal delay={120} variant="fade">
               <p className="text-[15.5px] leading-[1.75] text-muted-foreground">
-                PT Fusionify Digital Group operates from Jakarta with a delivery presence in
-                Singapore. We are held privately and take on work we can staff with people who have
-                already built the thing once.
+                PT Fusionify Digital Group builds scalable digital infrastructure, automation,
+                AI-powered solutions, cloud services, payment technologies and business software
+                that accelerate digital transformation — operated as a long-term ecosystem rather
+                than a series of projects.
               </p>
             </Reveal>
           </div>
