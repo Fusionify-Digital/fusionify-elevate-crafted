@@ -106,16 +106,17 @@ export function Ecosystem() {
               <h2 className="mt-6 text-[2rem] leading-[1.12] font-bold tracking-[-0.025em] sm:text-[2.4rem]">
                 Four products.
                 <br />
-                One continuous system.
+                One connected ecosystem.
               </h2>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-5 lg:col-start-8">
             <Reveal delay={110} variant="fade">
               <p className="text-[15.5px] leading-[1.72] text-muted-foreground">
-                Nothing here is sold as an isolated service. Each product assumes the others exist —
-                shared identity, shared telemetry, shared interface language — so what you adopt
-                second costs less than what you adopted first.
+                Fusionify is not a software house with a product list. Automation, payments,
+                engineering and network technology are built as one long-term system — shared
+                identity, shared payment rails, shared interface language — so each product an
+                organisation adopts makes the next one cheaper to run.
               </p>
             </Reveal>
           </div>
