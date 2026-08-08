@@ -8,21 +8,23 @@ import { Ecosystem } from "@/components/ecosystem";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Fusionify — Digital infrastructure for enterprises in Indonesia" },
+      { title: "PT Fusionify Digital Group — Digital technology company" },
       {
         name: "description",
         content:
-          "PT Fusionify Digital Group designs and engineers platforms, applied intelligence and cloud reliability for Indonesia's most demanding enterprises.",
+          "PT Fusionify Digital Group builds scalable digital infrastructure, automation, AI-powered solutions, cloud services, payment technology and business software.",
       },
       {
         property: "og:title",
-        content: "Fusionify — Digital infrastructure for enterprises in Indonesia",
+        content: "PT Fusionify Digital Group — Digital technology company",
       },
       {
         property: "og:description",
         content:
-          "Platform engineering, applied intelligence and cloud reliability, delivered with enterprise discipline.",
+          "An ecosystem of automation, payment and engineering products: Fusionify Bot, FTV Pay, Fusionify Solutions and FTV Injector.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -34,6 +36,8 @@ export const Route = createFileRoute("/")({
           "@type": "Organization",
           name: "PT Fusionify Digital Group",
           url: "/",
+          description:
+            "Digital technology company building scalable digital infrastructure, automation, AI-powered solutions, cloud services, payment technology and business software.",
           address: {
             "@type": "PostalAddress",
             addressLocality: "Jakarta Selatan",
@@ -50,9 +54,9 @@ export const Route = createFileRoute("/")({
 
 
 const measures = [
-  { value: "99.98%", label: "Median platform availability across managed workloads" },
-  { value: "11 yrs", label: "Average engineering tenure across our principal staff" },
-  { value: "40+", label: "Enterprise programmes delivered in banking, logistics and energy" },
+  { value: "4", label: "Products operating as one connected technology ecosystem" },
+  { value: "24/7", label: "Automation and payment services running without a maintenance window" },
+  { value: "99.9%", label: "Median availability targeted across managed workloads" },
 ];
 
 function Home() {
