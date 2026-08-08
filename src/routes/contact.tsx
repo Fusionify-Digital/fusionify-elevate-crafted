@@ -42,8 +42,8 @@ function Contact() {
               Start with the hard part.
             </h1>
             <p className="mt-6 max-w-sm text-[15.5px] leading-[1.75] text-muted-foreground">
-              Tell us what is fragile, slow or unowned. A principal engineer reads every message and
-              replies within two working days.
+              Tell us what you need automated, paid out, migrated or rebuilt. An engineer reads
+              every message and replies within two working days.
             </p>
           </Reveal>
 
