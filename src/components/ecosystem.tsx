@@ -187,8 +187,8 @@ export function Ecosystem() {
         <Reveal delay={60} variant="fade">
           <div className="mt-14 grid-12 items-center gap-y-6 border-t border-hairline pt-10">
             <p className="col-span-12 max-w-xl text-[15px] leading-[1.72] text-muted-foreground lg:col-span-7">
-              Most organisations start with one product and inherit the rest as they grow. The
-              ecosystem is designed for exactly that sequence.
+              Most organisations start with automation or payments and inherit the rest as they
+              grow. The ecosystem is designed for exactly that sequence.
             </p>
             <div className="col-span-12 lg:col-span-4 lg:col-start-9 lg:justify-self-end">
               <Link to="/capabilities" className="btn btn-secondary">
