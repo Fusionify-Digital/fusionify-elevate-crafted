@@ -90,16 +90,16 @@ function Home() {
                 <h1 className="mt-6 text-[2.6rem] leading-[1.04] font-extrabold tracking-[-0.032em] sm:text-[3.5rem] lg:text-[4rem]">
                   Digital infrastructure
                   <br />
-                  enterprises can
+                  built to run
                   <br />
-                  <span className="text-primary">trust for decades.</span>
+                  <span className="text-primary">for the long term.</span>
                 </h1>
               </Reveal>
               <Reveal delay={210} variant="fade">
                 <p className="mt-8 max-w-[34rem] text-[16.5px] leading-[1.72] text-muted-foreground">
-                  We engineer the platforms, applied intelligence and cloud foundations that
-                  Indonesia&rsquo;s largest organisations depend on — designed for scale, held to an
-                  enterprise standard, and accountable long after launch.
+                  Fusionify builds scalable digital infrastructure, automation, AI-powered
+                  solutions, cloud services, payment technology and business software — delivered as
+                  one connected ecosystem rather than isolated projects.
                 </p>
               </Reveal>
               <Reveal delay={310}>
@@ -114,8 +114,7 @@ function Home() {
               </Reveal>
               <Reveal delay={400} variant="fade">
                 <p className="mt-12 max-w-[30rem] border-t border-hairline pt-6 text-[13px] leading-[1.7] text-muted-foreground">
-                  Trusted across banking, logistics and energy — 40+ enterprise programmes
-                  delivered, 99.98% median availability.
+                  Fusionify Bot · FTV Pay · Fusionify Solutions · FTV Injector
                 </p>
               </Reveal>
             </div>
