@@ -190,11 +190,11 @@ function Home() {
           <div className="col-span-12 lg:col-span-7">
             <Reveal>
               <h2 className="text-[2.25rem] leading-[1.08] font-extrabold sm:text-[2.75rem]">
-                Tell us what needs to hold.
+                Tell us what you need to run.
               </h2>
               <p className="mt-6 max-w-lg text-[16px] leading-[1.75] text-muted-foreground">
-                We take on a small number of engagements each year. Conversations begin with a
-                technical review, not a sales deck.
+                Whether it starts with automation, payments or a system that has to be rebuilt,
+                conversations begin with a technical review rather than a sales deck.
               </p>
               <Link to="/contact" className="btn btn-primary mt-10">
                 Contact Fusionify
