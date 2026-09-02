@@ -1,8 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroEmblem from "@/assets/hero-emblem.png";
 import mascot from "@/assets/fusionify-mascot.png.asset.json";
-import { Reveal, useCountUp, useParallax } from "@/components/reveal";
+import { Reveal, useParallax } from "@/components/reveal";
 import { Ecosystem } from "@/components/ecosystem";
+import { ProductsPlatforms } from "@/components/products-platforms";
+import { Solutions } from "@/components/solutions";
+import { StoryTimeline } from "@/components/story-timeline";
+import { Leadership } from "@/components/leadership";
+import { Partners } from "@/components/partners";
+
 
 
 export const Route = createFileRoute("/")({
