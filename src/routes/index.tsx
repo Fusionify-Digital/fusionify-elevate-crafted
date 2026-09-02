@@ -9,8 +9,6 @@ import { StoryTimeline } from "@/components/story-timeline";
 import { Leadership } from "@/components/leadership";
 import { Partners } from "@/components/partners";
 
-
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -18,7 +16,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "PT Fusionify Digital Group builds scalable digital infrastructure, automation, AI-powered solutions, cloud services, payment technology and business software.",
+          "PT Fusionify Digital Group builds digital products, automation, infrastructure and scalable solutions as one connected technology ecosystem.",
       },
       {
         property: "og:title",
@@ -27,7 +25,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "An ecosystem of automation, payment and engineering products: Fusionify Bot, FTV Pay, Fusionify Solutions and FTV Injector.",
+          "A long-term technology ecosystem spanning digital products, automation, payment infrastructure and custom solutions.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -43,7 +41,7 @@ export const Route = createFileRoute("/")({
           name: "PT Fusionify Digital Group",
           url: "/",
           description:
-            "Digital technology company building scalable digital infrastructure, automation, AI-powered solutions, cloud services, payment technology and business software.",
+            "Digital technology company building digital products, automation, infrastructure and scalable solutions.",
           address: {
             "@type": "PostalAddress",
             addressLocality: "Jakarta Selatan",
@@ -56,34 +54,15 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-
-
-
-const measures = [
-  { value: "4", label: "Products operating as one connected technology ecosystem" },
-  { value: "24/7", label: "Automation and payment services running without a maintenance window" },
-  { value: "99.9%", label: "Median availability targeted across managed workloads" },
-];
-
 function Home() {
   const parallax = useParallax<HTMLDivElement>(0.05);
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative isolate overflow-hidden">
+      <section className="relative isolate overflow-hidden" aria-labelledby="home-title">
         <div className="hero-canvas" aria-hidden="true">
           <div className="hero-grid" />
-          <div
-            className="hero-glow"
-            style={{
-              inset: "-14% 4% auto auto",
-              width: "42rem",
-              height: "42rem",
-              background:
-                "radial-gradient(circle, color-mix(in oklab, var(--brand) 16%, transparent) 0%, transparent 70%)",
-            }}
-          />
+          <div className="hero-glow" />
         </div>
 
         <div className="shell section-top">
@@ -93,19 +72,21 @@ function Home() {
                 <p className="eyebrow">PT Fusionify Digital Group</p>
               </Reveal>
               <Reveal delay={110}>
-                <h1 className="mt-6 text-[2.6rem] leading-[1.04] font-extrabold tracking-[-0.032em] sm:text-[3.5rem] lg:text-[4rem]">
-                  Digital infrastructure
+                <h1
+                  id="home-title"
+                  className="mt-6 text-[2.6rem] leading-[1.04] font-extrabold tracking-[-0.032em] sm:text-[3.5rem] lg:text-[4rem]"
+                >
+                  Digital products
                   <br />
-                  built to run
+                  and infrastructure
                   <br />
-                  <span className="text-primary">for the long term.</span>
+                  <span className="text-primary">built for the long term.</span>
                 </h1>
               </Reveal>
               <Reveal delay={210} variant="fade">
                 <p className="mt-8 max-w-[34rem] text-[16.5px] leading-[1.72] text-muted-foreground">
-                  Fusionify builds scalable digital infrastructure, automation, AI-powered
-                  solutions, cloud services, payment technology and business software — delivered as
-                  one connected ecosystem rather than isolated projects.
+                  Fusionify builds digital products, automation, AI-powered solutions, cloud
+                  services, payment technologies and business software as one connected ecosystem.
                 </p>
               </Reveal>
               <Reveal delay={310}>
@@ -113,37 +94,24 @@ function Home() {
                   <Link to="/contact" className="btn btn-primary">
                     Start a conversation
                   </Link>
-                  <Link to="/capabilities" className="btn btn-secondary">
-                    See how we work
-                  </Link>
+                  <a href="#ecosystem" className="btn btn-secondary">
+                    Explore the ecosystem
+                  </a>
                 </div>
-              </Reveal>
-              <Reveal delay={400} variant="fade">
-                <p className="mt-12 max-w-[30rem] border-t border-hairline pt-6 text-[13px] leading-[1.7] text-muted-foreground">
-                  Fusionify Bot · FTV Pay · Fusionify Solutions · FTV Injector
-                </p>
               </Reveal>
             </div>
 
             <div className="col-span-12 lg:col-span-5 lg:col-start-8">
               <div ref={parallax} style={{ transform: "translateY(var(--parallax, 0px))" }}>
                 <div className="hero-stage relative mx-auto aspect-square w-full max-w-[19rem] sm:max-w-[24rem] lg:max-w-[28rem]">
-                  <div
-                    aria-hidden="true"
-                    className="ground-shadow absolute inset-x-[20%] bottom-[7%] h-[7%] rounded-[9999px]"
-                    style={{
-                      background:
-                        "radial-gradient(ellipse at center, oklch(0.2 0.02 262 / 0.2) 0%, transparent 72%)",
-                      filter: "blur(14px)",
-                    }}
-                  />
+                  <div aria-hidden="true" className="ground-shadow absolute inset-x-[20%] bottom-[7%] h-[7%]" />
                   <img
                     src={heroEmblem}
                     alt="Fusionify emblem rendered in three dimensions"
                     width={1280}
                     height={1280}
                     fetchPriority="high"
-                    className="float-3d media-lift relative h-full w-full object-contain drop-shadow-[0_40px_56px_rgba(20,26,44,0.16)]"
+                    className="float-3d media-lift relative h-full w-full object-contain"
                   />
                 </div>
               </div>
@@ -152,55 +120,48 @@ function Home() {
         </div>
       </section>
 
-
-
-      {/* Positioning statement */}
-      <section className="shell rule-top section-y">
+      <section id="overview" className="shell rule-top section-y" aria-labelledby="overview-title">
         <div className="grid-12 items-start gap-y-6">
           <div className="col-span-12 lg:col-span-3">
             <Reveal>
-              <p className="eyebrow">Position</p>
+              <p className="eyebrow">Company Overview</p>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-8 lg:col-start-5">
             <Reveal delay={80} variant="fade">
-              <p className="text-[1.5rem] leading-[1.42] font-medium tracking-[-0.022em] text-ink sm:text-[1.75rem]">
-                PT Fusionify Digital Group is a digital technology company, not a software house.
-                We build and operate the infrastructure our own products depend on — automation,
-                payments, cloud and applied AI — and make it available to the organisations we work
-                with.
+              <h2 id="overview-title" className="max-w-4xl text-[1.5rem] leading-[1.42] font-medium tracking-[-0.022em] text-ink sm:text-[1.75rem]">
+                PT Fusionify Digital Group is a digital technology company building and operating
+                the foundations that modern organisations depend on.
+              </h2>
+              <p className="mt-6 max-w-2xl text-[15px] leading-[1.8] text-muted-foreground">
+                Our mission is to build scalable digital infrastructure, automation, AI-powered
+                solutions, cloud services, payment technologies and business software that
+                accelerate digital transformation. Fusionify is a long-term technology ecosystem,
+                not a software house delivering isolated projects.
               </p>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* Ecosystem */}
       <Ecosystem />
+      <ProductsPlatforms />
+      <Solutions />
+      <StoryTimeline />
+      <Leadership />
+      <Partners />
 
-      {/* Measures */}
-      <section className="rule-top bg-surface section-y">
-        <div className="shell">
-          <div className="grid-12 gap-y-14">
-            {measures.map((m, i) => (
-              <Measure key={m.value} value={m.value} label={m.label} delay={i * 110} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-      {/* Closing */}
-      <section className="shell section-y">
+      <section className="shell section-y" aria-labelledby="contact-cta-title">
         <div className="grid-12 items-end gap-y-12">
           <div className="col-span-12 lg:col-span-7">
             <Reveal>
-              <h2 className="text-[2.25rem] leading-[1.08] font-extrabold sm:text-[2.75rem]">
-                Tell us what you need to run.
+              <p className="eyebrow">Work with Fusionify</p>
+              <h2 id="contact-cta-title" className="mt-5 text-[2.25rem] leading-[1.08] font-extrabold sm:text-[2.75rem]">
+                Build what your business needs to run.
               </h2>
               <p className="mt-6 max-w-lg text-[16px] leading-[1.75] text-muted-foreground">
-                Whether it starts with automation, payments or a system that has to be rebuilt,
-                conversations begin with a technical review rather than a sales deck.
+                Companies, startups and growing businesses can begin with a focused technical
+                conversation about automation, software, payments or digital infrastructure.
               </p>
               <Link to="/contact" className="btn btn-primary mt-10">
                 Contact Fusionify
@@ -219,22 +180,6 @@ function Home() {
           </div>
         </div>
       </section>
-
     </>
-  );
-}
-
-function Measure({ value, label, delay }: { value: string; label: string; delay: number }) {
-  const counted = useCountUp(value);
-  return (
-    <Reveal delay={delay} variant="scale" className="col-span-12 sm:col-span-6 lg:col-span-4">
-      <p
-        ref={counted.ref}
-        className="font-display text-[3rem] leading-none font-extrabold tracking-[-0.04em] tabular-nums text-ink"
-      >
-        {counted.value}
-      </p>
-      <p className="mt-6 max-w-[17rem] text-[14px] leading-[1.7] text-muted-foreground">{label}</p>
-    </Reveal>
   );
 }
