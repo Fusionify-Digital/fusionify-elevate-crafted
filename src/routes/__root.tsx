@@ -86,7 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "PT Fusionify Digital Group engineers digital platforms, applied intelligence and cloud reliability for enterprises across Southeast Asia.",
+          "Fusionify is a growing digital technology ecosystem from Bogor, Indonesia, building automation, software, digital infrastructure and digital products.",
       },
       { name: "author", content: "PT Fusionify Digital Group" },
       { property: "og:site_name", content: "Fusionify" },

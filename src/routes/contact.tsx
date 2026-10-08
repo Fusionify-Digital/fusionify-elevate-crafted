@@ -10,12 +10,12 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact PT Fusionify Digital Group in Jakarta about automation, payment technology, cloud services or custom software.",
+          "Contact PT Fusionify Digital Group in Bogor about automation, payment technology, cloud services or custom software.",
       },
       { property: "og:title", content: "Contact — PT Fusionify Digital Group" },
       {
         property: "og:description",
-        content: "Reach the Fusionify team in Jakarta about the ecosystem or a custom engagement.",
+        content: "Reach the Fusionify team in Bogor about the ecosystem or a custom engagement.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -57,7 +57,7 @@ function Contact() {
             <div>
               <p className="eyebrow">Office</p>
               <address className="mt-2 text-[15px] leading-relaxed not-italic text-muted-foreground">
-                Jakarta Selatan, DKI Jakarta
+                Bogor, Jawa Barat
                 <br />
                 Indonesia
               </address>

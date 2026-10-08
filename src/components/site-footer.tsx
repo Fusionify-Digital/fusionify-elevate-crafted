@@ -46,9 +46,9 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="mt-6 max-w-sm text-[15px] leading-[1.75] text-muted-foreground">
-              PT Fusionify Digital Group is a digital technology company building scalable digital
-              infrastructure, automation, AI-powered solutions, cloud services, payment technology
-              and business software.
+              Fusionify is a growing digital technology ecosystem. Registered as PT Fusionify
+              Digital Store (Bogor, December 2024), planned to become PT Fusionify Digital Group
+              in 2027.
             </p>
           </div>
 
@@ -126,7 +126,7 @@ export function SiteFooter() {
             <address className="mt-6 text-[14px] leading-[1.8] not-italic text-muted-foreground">
               Jl. Jend. Sudirman
               <br />
-              Jakarta Selatan, DKI Jakarta
+              Bogor, Jawa Barat
               <br />
               Indonesia 12190
             </address>
@@ -149,8 +149,8 @@ export function SiteFooter() {
 
         {/* Baseline */}
         <div className="rule-top mt-16 flex flex-col gap-3 pt-8 text-[12.5px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} PT Fusionify Digital Group. All rights reserved.</p>
-          <p className="tracking-[0.14em] uppercase">Digital Technology Company · Jakarta</p>
+          <p>© {new Date().getFullYear()} PT Fusionify Digital Store. All rights reserved.</p>
+          <p className="tracking-[0.14em] uppercase">Digital Technology Company · Bogor</p>
         </div>
       </div>
     </footer>

@@ -12,20 +12,20 @@ import { Partners } from "@/components/partners";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "PT Fusionify Digital Group — Digital technology company" },
+      { title: "Fusionify — Digital technology ecosystem from Bogor, Indonesia" },
       {
         name: "description",
         content:
-          "PT Fusionify Digital Group builds digital products, automation, infrastructure and scalable solutions as one connected technology ecosystem.",
+          "Fusionify builds digital automation, software, scalable infrastructure and ready-to-use digital products for individuals, UMKM, startups and companies.",
       },
       {
         property: "og:title",
-        content: "PT Fusionify Digital Group — Digital technology company",
+        content: "Fusionify — Digital technology ecosystem",
       },
       {
         property: "og:description",
         content:
-          "A long-term technology ecosystem spanning digital products, automation, payment infrastructure and custom solutions.",
+          "A growing technology ecosystem: Fusionify Bot, FTV Pay, Fusionify Solutions, FTV Injector and Fusionify digital tools.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -38,13 +38,15 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "PT Fusionify Digital Group",
+          name: "Fusionify",
+          legalName: "PT Fusionify Digital Store",
+          foundingDate: "2024-12",
           url: "/",
           description:
-            "Digital technology company building digital products, automation, infrastructure and scalable solutions.",
+            "Digital technology ecosystem building automation, software, digital infrastructure and ready-to-use digital products.",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Jakarta Selatan",
+            addressLocality: "Bogor",
             addressCountry: "ID",
           },
         }),
@@ -69,24 +71,24 @@ function Home() {
           <div className="grid-12 items-center gap-y-16">
             <div className="col-span-12 lg:col-span-6">
               <Reveal>
-                <p className="eyebrow">PT Fusionify Digital Group</p>
+                <p className="eyebrow">Fusionify · Digital technology ecosystem</p>
               </Reveal>
               <Reveal delay={110}>
                 <h1
                   id="home-title"
                   className="mt-6 text-[2.6rem] leading-[1.04] font-extrabold tracking-[-0.032em] sm:text-[3.5rem] lg:text-[4rem]"
                 >
-                  Digital products
+                  Automation, software
                   <br />
                   and infrastructure
                   <br />
-                  <span className="text-primary">built for the long term.</span>
+                  <span className="text-primary">for digital business.</span>
                 </h1>
               </Reveal>
               <Reveal delay={210} variant="fade">
                 <p className="mt-8 max-w-[34rem] text-[16.5px] leading-[1.72] text-muted-foreground">
-                  Fusionify builds digital products, automation, AI-powered solutions, cloud
-                  services, payment technologies and business software as one connected ecosystem.
+                  Fusionify builds automation platforms, payment infrastructure, custom software
+                  and ready-to-use digital products for individuals, UMKM, startups and companies.
                 </p>
               </Reveal>
               <Reveal delay={310}>
@@ -130,15 +132,29 @@ function Home() {
           <div className="col-span-12 lg:col-span-8 lg:col-start-5">
             <Reveal delay={80} variant="fade">
               <h2 id="overview-title" className="max-w-4xl text-[1.5rem] leading-[1.42] font-medium tracking-[-0.022em] text-ink sm:text-[1.75rem]">
-                PT Fusionify Digital Group is a digital technology company building and operating
-                the foundations that modern organisations depend on.
+                Fusionify is a growing digital technology ecosystem that started as a small
+                network project in 2022.
               </h2>
               <p className="mt-6 max-w-2xl text-[15px] leading-[1.8] text-muted-foreground">
-                Our mission is to build scalable digital infrastructure, automation, AI-powered
-                solutions, cloud services, payment technologies and business software that
-                accelerate digital transformation. Fusionify is a long-term technology ecosystem,
-                not a software house delivering isolated projects.
+                Today we focus on digital automation, software and application development,
+                scalable digital infrastructure, ready-to-use digital products and custom digital
+                solutions — for individuals, UMKM, startups and companies pursuing digital
+                transformation.
               </p>
+            </Reveal>
+            <Reveal delay={160} variant="fade">
+              <dl className="mt-12 grid gap-x-12 gap-y-8 border-t border-hairline pt-8 sm:grid-cols-3">
+                {[
+                  ["Registered company", "PT Fusionify Digital Store"],
+                  ["Established", "December 2024 · Bogor, Indonesia"],
+                  ["Planned for 2027", "PT Fusionify Digital Group"],
+                ].map(([k, v]) => (
+                  <div key={k}>
+                    <dt className="text-[12.5px] tracking-[0.08em] text-muted-foreground uppercase">{k}</dt>
+                    <dd className="mt-2 text-[15px] font-medium text-ink">{v}</dd>
+                  </div>
+                ))}
+              </dl>
             </Reveal>
           </div>
         </div>
