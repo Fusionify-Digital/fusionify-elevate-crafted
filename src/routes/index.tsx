@@ -142,6 +142,20 @@ function Home() {
                 transformation.
               </p>
             </Reveal>
+            <Reveal delay={160} variant="fade">
+              <dl className="mt-12 grid gap-x-12 gap-y-8 border-t border-hairline pt-8 sm:grid-cols-3">
+                {[
+                  ["Registered company", "PT Fusionify Digital Store"],
+                  ["Established", "December 2024 · Bogor, Indonesia"],
+                  ["Planned for 2027", "PT Fusionify Digital Group"],
+                ].map(([k, v]) => (
+                  <div key={k}>
+                    <dt className="text-[12.5px] tracking-[0.08em] text-muted-foreground uppercase">{k}</dt>
+                    <dd className="mt-2 text-[15px] font-medium text-ink">{v}</dd>
+                  </div>
+                ))}
+              </dl>
+            </Reveal>
           </div>
         </div>
       </section>

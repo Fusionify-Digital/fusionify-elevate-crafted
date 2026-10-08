@@ -11,32 +11,46 @@ type Chapter = {
 
 const chapters: Chapter[] = [
   {
-    year: "01",
-    label: "Chapter one",
-    title: "It started with automation.",
-    body: "Fusionify Bot was built to run digital commerce operations that people were doing by hand — orders, resellers, payments and reporting across Telegram and WhatsApp. Volume made the requirement obvious: the infrastructure underneath had to be treated as a product.",
-    marker: "Fusionify Bot",
+    year: "2022",
+    label: "May 2022",
+    title: "Tempest Tunnel.",
+    body: "The Fusionify technology journey began with Tempest Tunnel, a small network utility project.",
+    marker: "Tempest Tunnel",
   },
   {
     year: "02",
-    label: "Chapter two",
-    title: "Payments became the second layer.",
-    body: "Automated commerce is only as reliable as the money movement behind it. FTV Pay was built as payment infrastructure — collection, disbursement, settlement and reconciliation — first for our own platform, then for the organisations building on it.",
-    marker: "FTV Pay",
+    label: "Next stage",
+    title: "Fusion Tempest.",
+    body: "The project matured and took on a new identity as Fusion Tempest.",
+    marker: "Fusion Tempest",
   },
   {
     year: "03",
-    label: "Chapter three",
-    title: "The engineering practice opened.",
-    body: "Clients asked for the systems, not just the products. Fusionify Solutions formalised that work: enterprise software, web and mobile applications, AI integration, UI/UX and consulting, delivered on the same foundations we run ourselves.",
-    marker: "Fusionify Solutions",
+    label: "Next stage",
+    title: "FTV Injector.",
+    body: "The network technology became FTV Injector — a network utility and VPN product that is still part of the ecosystem today.",
+    marker: "FTV Injector",
   },
   {
     year: "04",
-    label: "Chapter four",
-    title: "A technology group, not a software house.",
-    body: "With FTV Injector covering network and connectivity, the four products now operate as one ecosystem under PT Fusionify Digital Group — a company whose output is long-term digital infrastructure rather than one-off delivery.",
-    marker: "PT Fusionify Digital Group",
+    label: "Next stage",
+    title: "Fusionify Injector.",
+    body: "The product moved under the Fusionify name, the first step toward a single brand.",
+    marker: "Fusionify Injector",
+  },
+  {
+    year: "05",
+    label: "Next stage",
+    title: "GRETONGERS.",
+    body: "The work grew beyond one product into a wider community and collaboration, GRETONGERS.",
+    marker: "GRETONGERS",
+  },
+  {
+    year: "06",
+    label: "Today",
+    title: "The Fusionify ecosystem.",
+    body: "Automation, payments, custom solutions, network technology and digital tools now operate as one ecosystem. PT Fusionify Digital Store was established in December 2024 in Bogor; the company plans to become PT Fusionify Digital Group in 2027.",
+    marker: "Fusionify ecosystem",
   },
 ];
 
@@ -113,15 +127,15 @@ export function StoryTimeline() {
             <Reveal>
               <p className="eyebrow">Trajectory</p>
               <h2 className="mt-5 text-[2rem] leading-[1.12] font-bold">
-                How the ecosystem was built.
+                From one project to an ecosystem.
               </h2>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-5 lg:col-start-8 lg:self-end">
             <Reveal delay={120} variant="fade">
               <p className="text-[15px] leading-[1.8] text-muted-foreground">
-                Each product exists because the one before it needed something that did not yet
-                exist. That order is why the ecosystem holds together.
+                Fusionify grew step by step from a small network project into a broader digital
+                technology ecosystem.
               </p>
             </Reveal>
           </div>

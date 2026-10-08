@@ -1,20 +1,50 @@
 import { Link } from "@tanstack/react-router";
 import { Reveal, Stagger } from "@/components/reveal";
 
-const tracks = [
-  {
-    title: "Technology partners",
-    body: "Payment, cloud and connectivity providers whose services sit inside the infrastructure we operate.",
-  },
-  {
-    title: "Delivery partners",
-    body: "Agencies and engineering teams that build on Fusionify platforms for their own clients.",
-  },
-  {
-    title: "Clients",
-    body: "Organisations running automation, payment or custom systems delivered by Fusionify Solutions.",
-  },
+const partners = [
+  "AutoGoPay Merchant",
+  "VioletMediaPay",
+  "Ari Server Premium",
+  "GRETONGERS",
+  "KIR Insancedikia",
+  "SMKS Pionir Bojonggede",
+  "SMKS Graha Nusantara Bogor",
+  "MG Order Digital",
 ];
+
+const clients = [
+  "PT QUIPANEL Beton Ringan Indonesia",
+  "PT HADYVA Interior Jabodetabek",
+  "CASSA SNACK",
+  "TOKYO SHOP ID",
+  "FAHMI COLLECTION",
+  "NAKAMA DIGITAL",
+  "ARIES DIGITAL",
+  "PREMIBIZ BIZCLUB",
+];
+
+function NameGrid({ label, title, names }: { label: string; title: string; names: string[] }) {
+  return (
+    <div className="mt-16 lg:mt-20">
+      <Reveal>
+        <div className="flex items-baseline justify-between gap-6 border-t border-ink/80 pt-5">
+          <h3 className="text-[16px] font-semibold tracking-[-0.01em]">{title}</h3>
+          <p className="text-[12.5px] tracking-[0.08em] text-muted-foreground uppercase">{label}</p>
+        </div>
+      </Reveal>
+      <Stagger step={60} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        {names.map((n) => (
+          <div
+            key={n}
+            className="flex min-h-[6.5rem] items-center border-b border-hairline py-6 pr-6 text-[15px] leading-snug font-medium text-ink transition-colors duration-500 hover:text-primary"
+          >
+            {n}
+          </div>
+        ))}
+      </Stagger>
+    </div>
+  );
+}
 
 export function Partners() {
   return (
@@ -32,33 +62,24 @@ export function Partners() {
           <div className="col-span-12 lg:col-span-5 lg:col-start-8">
             <Reveal delay={110} variant="fade">
               <p className="text-[15.5px] leading-[1.72] text-muted-foreground">
-                Partnerships and client engagements are published only with written consent. Named
-                references are shared directly during a technical review.
+                Payment, infrastructure, community and education partners, alongside the businesses
+                that run on Fusionify products and solutions.
               </p>
             </Reveal>
           </div>
         </div>
 
-        <Stagger step={100} className="mt-16 grid gap-x-16 gap-y-10 lg:mt-20 lg:grid-cols-3">
-          {tracks.map((t) => (
-            <div key={t.title} className="border-t border-hairline pt-6">
-              <h3 className="text-[16px] leading-snug font-semibold tracking-[-0.01em]">
-                {t.title}
-              </h3>
-              <p className="mt-3 text-[14.5px] leading-[1.72] text-muted-foreground">{t.body}</p>
-            </div>
-          ))}
-        </Stagger>
+        <NameGrid title="Partners" label={`${partners.length} organisations`} names={partners} />
+        <NameGrid title="Clients" label={`${clients.length} businesses`} names={clients} />
 
         <Reveal delay={60} variant="fade">
-          <div className="mt-14 grid-12 items-center gap-y-6 border-t border-hairline pt-10">
+          <div className="mt-14 grid-12 items-center gap-y-6 pt-4">
             <p className="col-span-12 max-w-xl text-[15px] leading-[1.72] text-muted-foreground lg:col-span-7">
-              Interested in partnering with Fusionify, or in a reference from an organisation
-              running a comparable system?
+              Interested in partnering with Fusionify or becoming a client?
             </p>
             <div className="col-span-12 lg:col-span-4 lg:col-start-9 lg:justify-self-end">
               <Link to="/contact" className="btn btn-secondary">
-                Request references
+                Get in touch
               </Link>
             </div>
           </div>
