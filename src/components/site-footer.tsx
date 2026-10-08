@@ -46,9 +46,9 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="mt-6 max-w-sm text-[15px] leading-[1.75] text-muted-foreground">
-              PT Fusionify Digital Group is a digital technology company building scalable digital
-              infrastructure, automation, AI-powered solutions, cloud services, payment technology
-              and business software.
+              Fusionify is a growing digital technology ecosystem. Registered as PT Fusionify
+              Digital Store (Bogor, December 2024), planned to become PT Fusionify Digital Group
+              in 2027.
             </p>
           </div>
 
