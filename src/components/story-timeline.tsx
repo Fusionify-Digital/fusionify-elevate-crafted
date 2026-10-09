@@ -10,48 +10,12 @@ type Chapter = {
 };
 
 const chapters: Chapter[] = [
-  {
-    year: "2022",
-    label: "May 2022",
-    title: "Tempest Tunnel.",
-    body: "The Fusionify technology journey began with Tempest Tunnel, a small network utility project.",
-    marker: "Tempest Tunnel",
-  },
-  {
-    year: "02",
-    label: "Next stage",
-    title: "Fusion Tempest.",
-    body: "The project matured and took on a new identity as Fusion Tempest.",
-    marker: "Fusion Tempest",
-  },
-  {
-    year: "03",
-    label: "Next stage",
-    title: "FTV Injector.",
-    body: "The network technology became FTV Injector — a network utility and VPN product that is still part of the ecosystem today.",
-    marker: "FTV Injector",
-  },
-  {
-    year: "04",
-    label: "Next stage",
-    title: "Fusionify Injector.",
-    body: "The product moved under the Fusionify name, the first step toward a single brand.",
-    marker: "Fusionify Injector",
-  },
-  {
-    year: "05",
-    label: "Next stage",
-    title: "GRETONGERS.",
-    body: "The work grew beyond one product into a wider community and collaboration, GRETONGERS.",
-    marker: "GRETONGERS",
-  },
-  {
-    year: "06",
-    label: "Today",
-    title: "The Fusionify ecosystem.",
-    body: "Automation, payments, custom solutions, network technology and digital tools now operate as one ecosystem. PT Fusionify Digital Store was established in December 2024 in Bogor; the company plans to become PT Fusionify Digital Group in 2027.",
-    marker: "Fusionify ecosystem",
-  },
+  { year: "2022", label: "August 2022", title: "Tempest Tunnel.", body: "The documented starting point of the Fusionify technology journey.", marker: "Tempest Tunnel" },
+  { year: "02", label: "Stage two", title: "Fusion Tempest.", body: "The next stage in the project's evolution.", marker: "Fusion Tempest" },
+  { year: "03", label: "Stage three", title: "FTV Injector.", body: "Network utility and VPN technology product.", marker: "FTV Injector" },
+  { year: "04", label: "Stage four", title: "Fusionify Injector.", body: "The product continued under the Fusionify name.", marker: "Fusionify Injector" },
+  { year: "05", label: "Stage five", title: "GRETONGERS.", body: "The next stage in the project's evolution.", marker: "GRETONGERS" },
+  { year: "06", label: "Today", title: "The Fusionify ecosystem.", body: "Automation, payments, custom solutions, network technology and digital tools under one ecosystem, operated by PT Fusionify Digital Store, registered on 18 August 2024 in Bogor. A change of name to PT Fusionify Digital Group is planned for 2027.", marker: "Fusionify ecosystem" },
 ];
 
 function useScrollProgress<T extends HTMLElement>() {

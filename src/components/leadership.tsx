@@ -6,9 +6,10 @@ const leaders: Leader[] = [
   { name: "Muhammad Jundy Rabbani, S.Kom.", role: "Founder & CEO" },
   { name: "Arya Isnaidi, S.Kom.", role: "Co-Founder & Co-CEO" },
   { name: "Dini Mufidah", role: "Chief Financial Officer" },
-  { name: "Fadhil Anugrah Riady", role: "Chief Technology Officer" },
   { name: "Faturrahman Syamil", role: "Chief Marketing Officer" },
-  { name: "Muhamad Faisal", role: "Chief Digital Officer" },
+  { name: "Muhamad Faisal", role: "Creative Media Associate" },
+  { name: "Muhammad Fauzi", role: "Business Development Associate" },
+  { name: "Winahyu Fajar Pamungkas", role: "Financial Support Partner" },
 ];
 
 function initials(name: string) {
@@ -29,15 +30,14 @@ export function Leadership() {
           <Reveal>
             <p className="eyebrow">Leadership</p>
             <h2 className="mt-5 text-[2rem] leading-[1.12] font-bold">
-              The people leading Fusionify.
+              The people behind Fusionify.
             </h2>
           </Reveal>
         </div>
         <div className="col-span-12 lg:col-span-6 lg:col-start-7 lg:self-end">
           <Reveal delay={120} variant="fade">
             <p className="max-w-xl text-[15.5px] leading-[1.75] text-muted-foreground">
-              The executive team responsible for strategy, finance, technology, marketing and
-              digital operations across the ecosystem.
+              Leadership and team members of PT Fusionify Digital Store.
             </p>
           </Reveal>
         </div>

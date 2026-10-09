@@ -12,9 +12,9 @@ const ecosystem = ["Fusionify Bot", "FTV Pay", "Fusionify Solutions", "FTV Injec
 
 const practice = [
   "Digital infrastructure",
-  "Automation & AI",
-  "Payment technology",
-  "Software & product",
+  "Automation",
+  "Payments",
+  "Software & websites",
 ];
 
 const legal = ["Privacy notice", "Terms of engagement", "Security posture", "Accessibility"];
@@ -47,8 +47,8 @@ export function SiteFooter() {
             </div>
             <p className="mt-6 max-w-sm text-[15px] leading-[1.75] text-muted-foreground">
               Fusionify is a growing digital technology ecosystem. Registered as PT Fusionify
-              Digital Store (Bogor, December 2024), planned to become PT Fusionify Digital Group
-              in 2027.
+              Digital Store (Bogor, 18 August 2024). A name change to PT Fusionify Digital Group
+              is planned for 2027.
             </p>
           </div>
 
@@ -60,9 +60,6 @@ export function SiteFooter() {
             >
               hello@fusionify.id
             </a>
-            <p className="mt-3 text-[13.5px] text-muted-foreground">
-              Response within one business day.
-            </p>
           </div>
         </div>
 

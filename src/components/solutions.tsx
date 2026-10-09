@@ -2,30 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { Reveal, Stagger } from "@/components/reveal";
 
 const solutions = [
-  {
-    title: "Automation",
-    body: "Operational workflows, messaging automation and back-office processes handled by systems instead of people repeating them.",
-  },
-  {
-    title: "Software & application development",
-    body: "Product engineering for web and mobile applications, from architecture and interface through to production operation.",
-  },
-  {
-    title: "Website development",
-    body: "Corporate sites, portals and commerce front-ends built for performance, accessibility and long-term maintenance.",
-  },
-  {
-    title: "Custom digital systems",
-    body: "Enterprise systems shaped around an organisation's own processes rather than forcing the organisation into a template.",
-  },
-  {
-    title: "AI integration",
-    body: "Applied AI inside existing systems — assistance, classification and decision support placed where it changes the work.",
-  },
-  {
-    title: "Digital infrastructure",
-    body: "Cloud services, payment rails, connectivity and the operational foundations the rest of the stack depends on.",
-  },
+  { title: "Digital automation", body: "Automation for ordering, digital product sales, payments and business operations." },
+  { title: "Software & application development", body: "Software and applications built to each client's requirements." },
+  { title: "Website development", body: "Website projects for businesses and organisations." },
+  { title: "Custom digital systems", body: "Systems shaped around a client's own processes." },
+  { title: "Ready-to-use digital products", body: "Digital products and services from the Fusionify ecosystem, including Fusionify digital tools." },
+  { title: "Digital infrastructure", body: "Payment infrastructure through FTV Pay and network technology through FTV Injector." },
 ];
 
 export function Solutions() {
@@ -39,15 +21,15 @@ export function Solutions() {
               <h2 className="mt-6 text-[2rem] leading-[1.12] font-bold tracking-[-0.025em] sm:text-[2.4rem]">
                 Work we take on
                 <br />
-                for organisations.
+                for our clients.
               </h2>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-5 lg:col-start-8">
             <Reveal delay={110} variant="fade">
               <p className="text-[15.5px] leading-[1.72] text-muted-foreground">
-                Engagements run on the same infrastructure that carries our own products, which is
-                why they can start small and still be extended for years.
+                Services for individuals, UMKM, startups and companies seeking digital
+                transformation.
               </p>
             </Reveal>
           </div>
@@ -69,7 +51,7 @@ export function Solutions() {
         <Reveal delay={80} variant="fade">
           <div className="mt-14 border-t border-hairline pt-10">
             <Link to="/capabilities" className="btn btn-secondary">
-              See how engagements run
+              View capabilities
             </Link>
           </div>
         </Reveal>

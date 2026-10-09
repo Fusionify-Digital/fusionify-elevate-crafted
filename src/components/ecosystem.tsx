@@ -59,7 +59,7 @@ const products = [
     key: "bot",
     name: "Fusionify Bot",
     kind: "Automation platform",
-    body: "Telegram and WhatsApp automation for digital commerce — reseller management, order and payment automation, analytics and day-to-day business operations, run from one control plane.",
+    body: "Automation platform for Telegram and WhatsApp digital product businesses — automated ordering, digital product sales, payment automation and business operations.",
     glyph: GlyphCore,
     connects: ["FTV Pay", "Fusionify Solutions"],
   },
@@ -74,7 +74,7 @@ const products = [
   {
     key: "solutions",
     name: "Fusionify Solutions",
-    kind: "Engineering practice",
+    kind: "Custom digital solutions",
     body: "Custom digital solutions — website projects, software development, systems, automation and digital services.",
     glyph: GlyphSurface,
     connects: ["Fusionify Bot", "FTV Pay", "FTV Injector"],
@@ -83,7 +83,7 @@ const products = [
     key: "injector",
     name: "FTV Injector",
     kind: "Network technology",
-    body: "Network utility and VPN technology for connectivity, tunnelling and secure access — the transport layer beneath products that have to work on constrained networks.",
+    body: "Network utility and VPN technology product.",
     glyph: GlyphOrbit,
     connects: ["Fusionify Solutions"],
   },
@@ -113,10 +113,8 @@ export function Ecosystem() {
           <div className="col-span-12 lg:col-span-5 lg:col-start-8">
             <Reveal delay={110} variant="fade">
               <p className="text-[15.5px] leading-[1.72] text-muted-foreground">
-                Fusionify is not a software house with a product list. Automation, payments,
-                engineering and network technology are built as one long-term system — shared
-                identity, shared payment rails, shared interface language — so each product an
-                organisation adopts makes the next one cheaper to run.
+                Automation, payments, custom solutions and network technology developed under one
+                brand, for individuals, UMKM, startups and companies.
               </p>
             </Reveal>
           </div>
@@ -187,8 +185,7 @@ export function Ecosystem() {
         <Reveal delay={60} variant="fade">
           <div className="mt-14 grid-12 items-center gap-y-6 border-t border-hairline pt-10">
             <p className="col-span-12 max-w-xl text-[15px] leading-[1.72] text-muted-foreground lg:col-span-7">
-              Most organisations start with automation or payments and inherit the rest as they
-              grow. The ecosystem is designed for exactly that sequence.
+              Explore what Fusionify works on, or get in touch to discuss your needs.
             </p>
             <div className="col-span-12 lg:col-span-4 lg:col-start-9 lg:justify-self-end">
               <Link to="/capabilities" className="btn btn-secondary">
