@@ -6,13 +6,13 @@ import { Reveal } from "@/components/reveal";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — PT Fusionify Digital Group" },
+      { title: "Contact — Fusionify" },
       {
         name: "description",
         content:
-          "Contact PT Fusionify Digital Group in Bogor about automation, payments, websites or custom software.",
+          "Contact Fusionify in Bogor about automation, payments, websites or custom software.",
       },
-      { property: "og:title", content: "Contact — PT Fusionify Digital Group" },
+      { property: "og:title", content: "Contact — Fusionify" },
       {
         property: "og:description",
         content: "Reach the Fusionify team in Bogor about the ecosystem or a custom engagement.",
