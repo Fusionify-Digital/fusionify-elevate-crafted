@@ -82,13 +82,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "PT Fusionify Digital Group" },
+      { title: "Fusionify — PT Fusionify Digital Store" },
       {
         name: "description",
         content:
           "Fusionify is a growing digital technology ecosystem from Bogor, Indonesia, building automation, software, digital infrastructure and digital products.",
       },
-      { name: "author", content: "PT Fusionify Digital Group" },
+      { name: "author", content: "PT Fusionify Digital Store" },
       { property: "og:site_name", content: "Fusionify" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

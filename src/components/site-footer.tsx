@@ -19,11 +19,6 @@ const practice = [
 
 const legal = ["Privacy notice", "Terms of engagement", "Security posture", "Accessibility"];
 
-const social = [
-  { label: "LinkedIn", href: "https://www.linkedin.com" },
-  { label: "GitHub", href: "https://github.com" },
-  { label: "X", href: "https://x.com" },
-];
 
 export function SiteFooter() {
   return (
@@ -121,26 +116,13 @@ export function SiteFooter() {
           <div className="col-span-12 lg:col-span-3">
             <p className="eyebrow">Office</p>
             <address className="mt-6 text-[14px] leading-[1.8] not-italic text-muted-foreground">
-              Jl. Jend. Sudirman
-              <br />
               Bogor, Jawa Barat
               <br />
-              Indonesia 12190
+              Indonesia
             </address>
-            <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[14px]">
-              {social.map((item) => (
-                <li key={item.label}>
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="link-quiet"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <a href="mailto:hello@fusionify.id" className="link-quiet mt-4 inline-block text-[14px]">
+              hello@fusionify.id
+            </a>
           </div>
         </div>
 
