@@ -5,7 +5,6 @@ type Product = {
   kind: string;
   body: string;
   points: string[];
-  status: string;
 };
 
 const products: Product[] = [
@@ -14,35 +13,30 @@ const products: Product[] = [
     kind: "Automation platform",
     body: "Automation for digital product businesses on Telegram and WhatsApp — automated ordering, digital product sales, payment automation and business operations.",
     points: ["Automated ordering", "Digital product sales", "Payment automation", "Business operations"],
-    status: "Available",
   },
   {
     name: "FTV Pay",
     kind: "Payment infrastructure",
     body: "Digital payment infrastructure and QRIS payment platform.",
     points: ["QRIS payments", "Digital payment infrastructure"],
-    status: "Available",
   },
   {
     name: "Fusionify Solutions",
     kind: "Custom digital solutions",
     body: "Website projects, software development, systems, automation and digital services built to each client's needs.",
     points: ["Websites", "Software & systems", "Automation", "Digital services"],
-    status: "Available",
   },
   {
     name: "FTV Injector",
     kind: "Network technology",
-    body: "Network utility and VPN technology product — where the Fusionify journey began.",
+    body: "Network utility and VPN technology product.",
     points: ["Network utility", "VPN technology"],
-    status: "Available",
   },
   {
     name: "Fusionify Digital Tools",
     kind: "Digital tools",
     body: "A set of everyday utilities from the Fusionify ecosystem.",
     points: ["Fusionify TMail", "Fusionify SpeedTest", "Fusionify Downloader", "Fusionify Uploader"],
-    status: "Available",
   },
 ];
 
@@ -64,8 +58,7 @@ export function ProductsPlatforms() {
           <div className="col-span-12 lg:col-span-5 lg:col-start-8">
             <Reveal delay={110} variant="fade">
               <p className="text-[15.5px] leading-[1.72] text-muted-foreground">
-                Each platform is built and operated by Fusionify. They can be adopted individually,
-                but they are designed to be run together.
+                Products and platforms developed within the Fusionify ecosystem.
               </p>
             </Reveal>
           </div>
@@ -84,9 +77,6 @@ export function ProductsPlatforms() {
                 <h3 className="mt-4 text-[1.35rem] leading-[1.2] font-semibold tracking-[-0.015em]">
                   {p.name}
                 </h3>
-                <p className="mt-4 text-[12.5px] tracking-[0.08em] text-brand uppercase">
-                  {p.status}
-                </p>
               </div>
               <div className="col-span-12 lg:col-span-7 lg:col-start-6">
                 <p className="max-w-[38rem] text-[15px] leading-[1.75] text-muted-foreground">

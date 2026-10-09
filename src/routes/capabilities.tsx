@@ -4,16 +4,16 @@ import { Reveal, Stagger } from "@/components/reveal";
 export const Route = createFileRoute("/capabilities")({
   head: () => ({
     meta: [
-      { title: "Capabilities — PT Fusionify Digital Group" },
+      { title: "Capabilities — Fusionify" },
       {
         name: "description",
         content:
-          "Digital infrastructure, automation and AI, payment technology and custom software engineering from PT Fusionify Digital Group.",
+          "Digital automation, payments, custom solutions, network technology and digital tools from Fusionify.",
       },
-      { property: "og:title", content: "Capabilities — PT Fusionify Digital Group" },
+      { property: "og:title", content: "Capabilities — Fusionify" },
       {
         property: "og:description",
-        content: "How Fusionify builds and operates long-term digital infrastructure.",
+        content: "What Fusionify works on: automation, payments, custom solutions and digital tools.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -25,69 +25,17 @@ export const Route = createFileRoute("/capabilities")({
 });
 
 const practices = [
-  {
-    index: "01",
-    title: "Digital infrastructure",
-    lead: "The systems the business cannot operate without.",
-    points: [
-      "Scalable service architecture and data modelling",
-      "Cloud services, landing zones and managed operations",
-      "Observability, reliability targets and incident practice",
-      "Migration of legacy systems without a hard cutover",
-    ],
-  },
-  {
-    index: "02",
-    title: "Automation & AI",
-    lead: "Operations that run without a person in the loop.",
-    points: [
-      "Telegram and WhatsApp automation via Fusionify Bot",
-      "Reseller, order and fulfilment workflow automation",
-      "AI integration for support, documents and decisioning",
-      "Operational analytics and reporting",
-    ],
-  },
-  {
-    index: "03",
-    title: "Payment technology",
-    lead: "Money movement treated as infrastructure.",
-    points: [
-      "Payment gateway integration through FTV Pay",
-      "Collection, disbursement and settlement flows",
-      "Automated reconciliation and transaction reporting",
-      "Fraud controls and audit-ready transaction records",
-    ],
-  },
-  {
-    index: "04",
-    title: "Software & product",
-    lead: "Custom systems built on the same foundations as our products.",
-    points: [
-      "Enterprise systems, web and mobile applications",
-      "UI/UX design and design systems",
-      "Technology consulting and architecture review",
-      "Network and connectivity tooling, including FTV Injector",
-    ],
-  },
+  { index: "01", title: "Digital automation", lead: "Automation for digital product businesses.", points: ["Telegram and WhatsApp automation via Fusionify Bot", "Automated ordering and digital product sales", "Payment automation", "Business operations"] },
+  { index: "02", title: "Payments", lead: "Digital payment infrastructure.", points: ["FTV Pay digital payment infrastructure", "QRIS payment platform"] },
+  { index: "03", title: "Custom solutions", lead: "Built to each client's requirements through Fusionify Solutions.", points: ["Website projects", "Software development", "Systems", "Automation and digital services"] },
+  { index: "04", title: "Network & digital tools", lead: "Utilities from the Fusionify ecosystem.", points: ["FTV Injector — network utility and VPN technology", "Fusionify TMail", "Fusionify SpeedTest", "Fusionify Downloader and Uploader"] },
 ];
 
 const method = [
-  {
-    step: "Review",
-    body: "Two to three weeks inside your systems and your constraints. We leave a written assessment whether or not we continue.",
-  },
-  {
-    step: "Architecture",
-    body: "A decision record for every consequential choice, with the trade-offs stated plainly and owned in public.",
-  },
-  {
-    step: "Delivery",
-    body: "Small senior teams shipping to production continuously. No staffing pyramid, no offshore handoff.",
-  },
-  {
-    step: "Stewardship",
-    body: "We remain on call through stabilisation and hand over runbooks your own engineers can actually follow.",
-  },
+  { step: "Conversation", body: "Tell us what you need via hello@fusionify.id or the contact form." },
+  { step: "Scope", body: "We agree on requirements and the right product or solution." },
+  { step: "Build", body: "Fusionify develops and configures the solution." },
+  { step: "Handover", body: "The solution is delivered and supported as agreed." },
 ];
 
 function Capabilities() {
@@ -99,15 +47,14 @@ function Capabilities() {
             <Reveal>
               <p className="eyebrow">Capabilities</p>
               <h1 className="mt-6 text-[2.75rem] leading-[1.05] font-extrabold sm:text-[3.5rem]">
-                Engineering, held to a single standard.
+                What Fusionify works on.
               </h1>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-4 lg:col-start-9">
             <Reveal delay={120} variant="fade">
               <p className="text-[15.5px] leading-[1.75] text-muted-foreground">
-                We work in four practices. Most engagements draw on more than one, because the
-                hardest problems rarely sit inside a single discipline.
+                Four areas, drawn from the products and services of the Fusionify ecosystem.
               </p>
             </Reveal>
           </div>
@@ -154,7 +101,7 @@ function Capabilities() {
           <div className="col-span-12 lg:col-span-3">
             <Reveal>
               <p className="eyebrow">Method</p>
-              <h2 className="mt-5 text-[1.9rem] leading-[1.12] font-bold">How an engagement runs.</h2>
+              <h2 className="mt-5 text-[1.9rem] leading-[1.12] font-bold">How we work together.</h2>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-8 lg:col-start-5">
@@ -176,7 +123,7 @@ function Capabilities() {
       <section className="shell section-y">
         <Reveal>
           <h2 className="max-w-2xl text-[2.25rem] leading-[1.1] font-extrabold sm:text-[2.75rem]">
-            Bring us the part nobody wants to touch.
+            Discuss your project with Fusionify.
           </h2>
           <Link
             to="/contact"

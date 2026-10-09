@@ -12,18 +12,13 @@ const ecosystem = ["Fusionify Bot", "FTV Pay", "Fusionify Solutions", "FTV Injec
 
 const practice = [
   "Digital infrastructure",
-  "Automation & AI",
-  "Payment technology",
-  "Software & product",
+  "Automation",
+  "Payments",
+  "Software & websites",
 ];
 
 const legal = ["Privacy notice", "Terms of engagement", "Security posture", "Accessibility"];
 
-const social = [
-  { label: "LinkedIn", href: "https://www.linkedin.com" },
-  { label: "GitHub", href: "https://github.com" },
-  { label: "X", href: "https://x.com" },
-];
 
 export function SiteFooter() {
   return (
@@ -47,8 +42,8 @@ export function SiteFooter() {
             </div>
             <p className="mt-6 max-w-sm text-[15px] leading-[1.75] text-muted-foreground">
               Fusionify is a growing digital technology ecosystem. Registered as PT Fusionify
-              Digital Store (Bogor, December 2024), planned to become PT Fusionify Digital Group
-              in 2027.
+              Digital Store (Bogor, 18 August 2024). A name change to PT Fusionify Digital Group
+              is planned for 2027.
             </p>
           </div>
 
@@ -60,9 +55,6 @@ export function SiteFooter() {
             >
               hello@fusionify.id
             </a>
-            <p className="mt-3 text-[13.5px] text-muted-foreground">
-              Response within one business day.
-            </p>
           </div>
         </div>
 
@@ -124,26 +116,13 @@ export function SiteFooter() {
           <div className="col-span-12 lg:col-span-3">
             <p className="eyebrow">Office</p>
             <address className="mt-6 text-[14px] leading-[1.8] not-italic text-muted-foreground">
-              Jl. Jend. Sudirman
-              <br />
               Bogor, Jawa Barat
               <br />
-              Indonesia 12190
+              Indonesia
             </address>
-            <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[14px]">
-              {social.map((item) => (
-                <li key={item.label}>
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="link-quiet"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <a href="mailto:hello@fusionify.id" className="link-quiet mt-4 inline-block text-[14px]">
+              hello@fusionify.id
+            </a>
           </div>
         </div>
 

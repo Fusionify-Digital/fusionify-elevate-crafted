@@ -40,7 +40,7 @@ export const Route = createFileRoute("/")({
           "@type": "Organization",
           name: "Fusionify",
           legalName: "PT Fusionify Digital Store",
-          foundingDate: "2024-12",
+          foundingDate: "2024-08-18",
           url: "/",
           description:
             "Digital technology ecosystem building automation, software, digital infrastructure and ready-to-use digital products.",
@@ -133,7 +133,7 @@ function Home() {
             <Reveal delay={80} variant="fade">
               <h2 id="overview-title" className="max-w-4xl text-[1.5rem] leading-[1.42] font-medium tracking-[-0.022em] text-ink sm:text-[1.75rem]">
                 Fusionify is a growing digital technology ecosystem that started as a small
-                network project in 2022.
+                network project in August 2022.
               </h2>
               <p className="mt-6 max-w-2xl text-[15px] leading-[1.8] text-muted-foreground">
                 Today we focus on digital automation, software and application development,
@@ -146,8 +146,8 @@ function Home() {
               <dl className="mt-12 grid gap-x-12 gap-y-8 border-t border-hairline pt-8 sm:grid-cols-3">
                 {[
                   ["Registered company", "PT Fusionify Digital Store"],
-                  ["Established", "December 2024 · Bogor, Indonesia"],
-                  ["Planned for 2027", "PT Fusionify Digital Group"],
+                  ["Registered", "18 August 2024 · Bogor, Indonesia"],
+                  ["Planned name change, 2027", "PT Fusionify Digital Group"],
                 ].map(([k, v]) => (
                   <div key={k}>
                     <dt className="text-[12.5px] tracking-[0.08em] text-muted-foreground uppercase">{k}</dt>

@@ -6,13 +6,13 @@ import { Reveal } from "@/components/reveal";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — PT Fusionify Digital Group" },
+      { title: "Contact — Fusionify" },
       {
         name: "description",
         content:
-          "Contact PT Fusionify Digital Group in Bogor about automation, payment technology, cloud services or custom software.",
+          "Contact Fusionify in Bogor about automation, payments, websites or custom software.",
       },
-      { property: "og:title", content: "Contact — PT Fusionify Digital Group" },
+      { property: "og:title", content: "Contact — Fusionify" },
       {
         property: "og:description",
         content: "Reach the Fusionify team in Bogor about the ecosystem or a custom engagement.",
@@ -39,11 +39,11 @@ function Contact() {
           <Reveal>
             <p className="eyebrow">Contact</p>
             <h1 className="mt-6 text-[2.75rem] leading-[1.05] font-extrabold sm:text-[3.25rem]">
-              Start with the hard part.
+              Get in touch.
             </h1>
             <p className="mt-6 max-w-sm text-[15.5px] leading-[1.75] text-muted-foreground">
-              Tell us what you need automated, paid out, migrated or rebuilt. An engineer reads
-              every message and replies within two working days.
+              Tell us what you need — automation, payments, a website, software or a custom
+              system. You can also email hello@fusionify.id.
             </p>
           </Reveal>
 
@@ -72,7 +72,7 @@ function Contact() {
               onSubmit={(e) => {
                 e.preventDefault();
                 setSent(true);
-                toast.success("Message received. We’ll reply within two working days.");
+                toast.success("Thank you — your message has been noted.");
               }}
             >
               <div className="grid gap-10 sm:grid-cols-2">
@@ -104,7 +104,7 @@ function Contact() {
               </div>
               <div>
                 <label htmlFor="message" className="eyebrow">
-                  What needs to hold?
+                  Message
                 </label>
                 <textarea
                   id="message"
@@ -112,7 +112,7 @@ function Contact() {
                   rows={4}
                   required
                   className={`${fieldClass} mt-3 resize-none`}
-                  placeholder="A short description of the system and the constraint."
+                  placeholder="A short description of what you need."
                 />
               </div>
               <button
