@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { toast } from "sonner";
 import { Reveal } from "@/components/reveal";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -30,7 +30,7 @@ const fieldClass = "field";
 
 
 function Contact() {
-  const [sent, setSent] = useState(false);
+  const [checked, setChecked] = useState(false);
 
   return (
     <section className="shell section-top">
@@ -69,12 +69,16 @@ function Contact() {
           <Reveal delay={100}>
             <form
               className="space-y-10"
+              onChange={() => setChecked(false)}
               onSubmit={(e) => {
                 e.preventDefault();
-                setSent(true);
-                toast.success("Thank you — your message has been noted.");
+                setChecked(true);
               }}
             >
+              <p id="form-limitation" className="text-[14.5px] leading-[1.7] text-muted-foreground">
+                This form only checks the required fields. It does not send or save your message.
+                To contact Fusionify, email hello@fusionify.id directly.
+              </p>
               <div className="grid gap-10 sm:grid-cols-2">
                 <div>
                   <label htmlFor="name" className="eyebrow">
@@ -115,12 +119,21 @@ function Contact() {
                   placeholder="A short description of what you need."
                 />
               </div>
-              <button
+              <Button
                 type="submit"
-                className="btn btn-primary"
+                variant="ghost"
+                className="btn btn-primary h-auto whitespace-normal"
+                aria-describedby="form-limitation"
               >
-                {sent ? "Message sent" : "Send message"}
-              </button>
+                Check fields
+              </Button>
+              {checked && (
+                <p role="status" className="text-[14.5px] leading-[1.7] text-muted-foreground">
+                  Required fields checked. Your message has not been sent or saved. Email{" "}
+                  <a href="mailto:hello@fusionify.id" className="link-quiet">hello@fusionify.id</a>{" "}
+                  directly to contact Fusionify.
+                </p>
+              )}
             </form>
           </Reveal>
         </div>

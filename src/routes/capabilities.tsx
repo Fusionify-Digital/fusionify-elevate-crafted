@@ -32,10 +32,10 @@ const practices = [
 ];
 
 const method = [
-  { step: "Conversation", body: "Tell us what you need via hello@fusionify.id or the contact form." },
-  { step: "Scope", body: "We agree on requirements and the right product or solution." },
-  { step: "Build", body: "Fusionify develops and configures the solution." },
-  { step: "Handover", body: "The solution is delivered and supported as agreed." },
+  { step: "Conversation", body: "Discuss your needs via hello@fusionify.id." },
+  { step: "Scope", body: "Explore requirements and possible approaches." },
+  { step: "Build", body: "Consider development or configuration, subject to an agreed scope." },
+  { step: "Handover", body: "Discuss handover and any support arrangements for the engagement." },
 ];
 
 function Capabilities() {
@@ -100,8 +100,11 @@ function Capabilities() {
         <div className="shell grid-12 gap-y-12">
           <div className="col-span-12 lg:col-span-3">
             <Reveal>
-              <p className="eyebrow">Method</p>
-              <h2 className="mt-5 text-[1.9rem] leading-[1.12] font-bold">How we work together.</h2>
+              <p className="eyebrow">Proposed process</p>
+              <h2 className="mt-5 text-[1.9rem] leading-[1.12] font-bold">A possible engagement approach.</h2>
+              <p className="mt-4 text-[14.5px] leading-[1.7] text-muted-foreground">
+                A general proposal, not an established company policy. Scope and arrangements would be agreed for each engagement.
+              </p>
             </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-8 lg:col-start-5">
