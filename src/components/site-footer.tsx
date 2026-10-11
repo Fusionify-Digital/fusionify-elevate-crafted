@@ -101,13 +101,11 @@ export function SiteFooter() {
 
 
           <div className="col-span-6 lg:col-span-2">
-            <p className="eyebrow">Legal</p>
-            <ul className="mt-6 space-y-3.5 text-[14px]">
+            <p className="eyebrow">Legal · Unpublished</p>
+            <ul className="mt-6 space-y-3.5 text-[14px] text-muted-foreground">
               {legal.map((item) => (
                 <li key={item}>
-                  <Link to="/contact" className="link-quiet">
-                    {item}
-                  </Link>
+                  {item}
                 </li>
               ))}
             </ul>

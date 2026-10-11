@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep contact form submission validation-only until a real delivery mechanism is explicitly added; this prevents false delivery confirmations.
+- Keep browser behavioral regression tests in `tests/` using Python's unittest and Playwright; the project has no JavaScript test runner configured.

@@ -61,15 +61,13 @@ const products = [
     kind: "Automation platform",
     body: "Automation platform for Telegram and WhatsApp digital product businesses — automated ordering, digital product sales, payment automation and business operations.",
     glyph: GlyphCore,
-    connects: ["FTV Pay", "Fusionify Solutions"],
   },
   {
     key: "pay",
     name: "FTV Pay",
     kind: "Payment infrastructure",
-    body: "Digital payment infrastructure and QRIS payment platform for the products and businesses in the ecosystem.",
+    body: "Digital payment infrastructure and QRIS payment platform.",
     glyph: GlyphSignal,
-    connects: ["Fusionify Bot", "Fusionify Solutions"],
   },
   {
     key: "solutions",
@@ -77,7 +75,6 @@ const products = [
     kind: "Custom digital solutions",
     body: "Custom digital solutions — website projects, software development, systems, automation and digital services.",
     glyph: GlyphSurface,
-    connects: ["Fusionify Bot", "FTV Pay", "FTV Injector"],
   },
   {
     key: "injector",
@@ -85,14 +82,13 @@ const products = [
     kind: "Network technology",
     body: "Network utility and VPN technology product.",
     glyph: GlyphOrbit,
-    connects: ["Fusionify Solutions"],
   },
 ];
 
-const lead = products[0]!;
-const rest = products.slice(1);
+const [lead, ...rest] = products;
 
 export function Ecosystem() {
+  if (!lead) return null;
   const LeadGlyph = lead.glyph;
 
   return (
@@ -106,7 +102,7 @@ export function Ecosystem() {
               <h2 className="mt-6 text-[2rem] leading-[1.12] font-bold tracking-[-0.025em] sm:text-[2.4rem]">
                 Four products.
                 <br />
-                One connected ecosystem.
+                One Fusionify ecosystem.
               </h2>
             </Reveal>
           </div>
@@ -137,16 +133,12 @@ export function Ecosystem() {
                 <p className="mt-4 max-w-[36rem] text-[15px] leading-[1.72] text-muted-foreground">
                   {lead.body}
                 </p>
-                <Connects to={lead.connects} />
               </div>
             </div>
           </article>
         </Reveal>
 
-        {/* Connective spine */}
-        <div className="eco-spine" aria-hidden="true">
-          <span />
-        </div>
+        <div className="eco-spine" aria-hidden="true" />
 
         {/* Supporting products */}
         <Stagger step={120} className="grid gap-4 lg:grid-cols-12">
@@ -173,9 +165,6 @@ export function Ecosystem() {
                 >
                   {p.body}
                 </p>
-                <div className="mt-auto">
-                  <Connects to={p.connects} />
-                </div>
               </article>
             );
           })}
@@ -189,7 +178,7 @@ export function Ecosystem() {
             </p>
             <div className="col-span-12 lg:col-span-4 lg:col-start-9 lg:justify-self-end">
               <Link to="/capabilities" className="btn btn-secondary">
-                How the ecosystem fits together
+                Explore capabilities
               </Link>
             </div>
           </div>
@@ -199,11 +188,4 @@ export function Ecosystem() {
   );
 }
 
-function Connects({ to }: { to: string[] }) {
-  return (
-    <p className="eco-relations mt-8">
-      Works with <span>{to.join(", ")}</span>
-    </p>
-  );
-}
 
