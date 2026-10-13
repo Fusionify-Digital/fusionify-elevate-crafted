@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroEmblem from "@/assets/hero-emblem.png";
 import mascot from "@/assets/fusionify-mascot.png.asset.json";
+import { assetUrl } from "@/lib/asset-url";
 import { Reveal, useParallax } from "@/components/reveal";
 import { Ecosystem } from "@/components/ecosystem";
 import { ProductsPlatforms } from "@/components/products-platforms";
@@ -187,7 +188,7 @@ function Home() {
           <div className="col-span-12 lg:col-span-4 lg:col-start-9">
             <Reveal delay={120} variant="scale">
               <img
-                src={mascot.url}
+                src={assetUrl(mascot)}
                 alt="Fi, the Fusionify mascot, holding a blank sign"
                 loading="lazy"
                 className="float-slow media-lift ml-0 h-40 w-auto object-contain lg:ml-auto"

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import mark from "@/assets/fusionify-mark.png.asset.json";
+import { assetUrl } from "@/lib/asset-url";
 
 const navigate = [
   { label: "Home", to: "/" },
@@ -29,7 +30,7 @@ export function SiteFooter() {
           <div className="col-span-12 lg:col-span-5">
             <div className="flex min-w-0 items-center gap-2.5">
               <img
-                src={mark.url}
+                src={assetUrl(mark)}
                 alt="Fusionify"
                 width={36}
                 height={36}

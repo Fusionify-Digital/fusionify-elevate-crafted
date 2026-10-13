@@ -11,3 +11,4 @@
 
 - Keep contact form submission validation-only until a real delivery mechanism is explicitly added; this prevents false delivery confirmations.
 - Keep browser behavioral regression tests in `tests/` using Python's unittest and Playwright; the project has no JavaScript test runner configured.
+- Resolve Lovable asset pointers through `src/lib/asset-url.ts` on the public Lovable host; external deployments do not provide the same-origin asset gateway.

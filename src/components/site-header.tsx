@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import mark from "@/assets/fusionify-mark.png.asset.json";
+import { assetUrl } from "@/lib/asset-url";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -49,7 +50,7 @@ export function SiteHeader() {
           aria-label="Fusionify home"
         >
           <img
-            src={mark.url}
+            src={assetUrl(mark)}
             alt=""
             width={28}
             height={28}
