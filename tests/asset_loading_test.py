@@ -12,7 +12,7 @@ class AssetLoadingTest(unittest.TestCase):
             page.goto("http://localhost:8080", wait_until="networkidle")
             for selector in ("header img", "footer img", 'img[alt="Fi, the Fusionify mascot, holding a blank sign"]'):
                 image = page.locator(selector)
-                image.scroll_into_view_if_needed()
+                image.evaluate("image => image.scrollIntoView({behavior: 'instant', block: 'center'})")
                 page.wait_for_function(
                     "selector => { const image = document.querySelector(selector); return image && image.complete && image.naturalWidth > 0; }",
                     arg=selector,
