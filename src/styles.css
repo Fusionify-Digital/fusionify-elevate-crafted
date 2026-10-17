@@ -2715,6 +2715,7 @@ html {
 }
 .fx-hero h1 > * {
   display: block;
+  white-space: nowrap;
 }
 .fx-hero h1 span {
   font-weight: 300;
@@ -4003,6 +4004,9 @@ html {
   }
   .fx-hero h1 {
     font-size: clamp(3.45rem, 17vw, 5rem);
+  }
+  .fx-hero h1 > * {
+    white-space: normal;
   }
   .fx-hero-mark {
     min-height: 260px;

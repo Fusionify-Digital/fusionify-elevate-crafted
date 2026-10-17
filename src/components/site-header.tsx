@@ -19,7 +19,7 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [active, setActive] = useState("about");
+  const [active, setActive] = useState("");
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(false);
   const [sound, setSound] = useState(true);
