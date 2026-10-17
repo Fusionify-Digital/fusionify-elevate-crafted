@@ -36,11 +36,11 @@ const principles = [
 function Company() {
   return (
     <>
-      <section className="shell section-top">
+      <section className="shell page-hero section-top">
         <div className="grid-12 gap-y-10">
           <div className="col-span-12 lg:col-span-7">
             <Reveal>
-              <p className="eyebrow">Company</p>
+              <p className="sheet-label"><span>01</span> Company</p>
               <h1 className="mt-6 text-[2.75rem] leading-[1.05] font-extrabold sm:text-[3.5rem]">
                 A growing digital technology ecosystem.
               </h1>

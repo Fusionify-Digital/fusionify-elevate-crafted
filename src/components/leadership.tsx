@@ -48,7 +48,7 @@ export function Leadership() {
           <article key={leader.name} className="group col-span-12 sm:col-span-6 lg:col-span-4">
             <div
               aria-hidden="true"
-              className="flex aspect-[5/4] items-end rounded-[var(--radius-lg,1rem)] border border-hairline bg-surface p-8 transition-colors duration-700 group-hover:border-primary/30"
+              className="leader-monogram flex aspect-[5/4] items-end rounded-[var(--radius-lg,1rem)] border border-hairline bg-surface p-8 transition-colors duration-700 group-hover:border-primary/30"
             >
               <span className="font-display text-[4.5rem] leading-none font-extrabold tracking-[-0.04em] text-ink/15 transition-colors duration-700 group-hover:text-primary/40">
                 {initials(leader.name)}

@@ -1,5 +1,6 @@
-import { Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { Link, useLocation } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import mark from "@/assets/fusionify-mark.png.asset.json";
 import { assetUrl } from "@/lib/asset-url";
 import { cn } from "@/lib/utils";
@@ -11,136 +12,127 @@ const nav = [
 ] as const;
 
 export function SiteHeader() {
+  const pathname = useLocation({ select: (location) => location.pathname });
   const [scrolled, setScrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [open, setOpen] = useState(false);
+  const [dark, setDark] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    setDark(document.documentElement.classList.contains("dark"));
+    const onScroll = () => {
+      setScrolled(window.scrollY > 12);
+      const distance = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(distance > 0 ? Math.min(1, window.scrollY / distance) : 0);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        menuButton.current?.focus();
+      }
+    };
+    const onResize = () => {
+      if (window.innerWidth >= 768) setOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    window.addEventListener("resize", onResize);
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("resize", onResize);
     };
   }, [open]);
 
-  const solid = scrolled || open;
+  function toggleTheme() {
+    const next = !document.documentElement.classList.contains("dark");
+    document.documentElement.classList.toggle("dark", next);
+    setDark(next);
+    try {
+      localStorage.setItem("fusionify-theme", next ? "dark" : "light");
+    } catch {
+      /* Theme still works when storage is unavailable. */
+    }
+  }
+
+  const overHero = pathname === "/" && !scrolled && !open;
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <div
-        className={cn(
-          "header-surface absolute inset-0",
-          solid
-            ? "bg-background/72 shadow-[inset_0_-1px_0_0_var(--hairline)] backdrop-blur-xl backdrop-saturate-150"
-            : "bg-transparent",
-        )}
-        aria-hidden
-      />
-
-      <div className="shell relative flex h-[76px] items-center justify-between gap-8">
+    <header
+      className={cn(
+        "site-header fixed inset-x-0 top-0 z-50",
+        overHero ? "is-over-hero" : "is-solid",
+      )}
+    >
+      <div className="header-surface absolute inset-0" aria-hidden="true" />
+      <span className="page-progress" style={{ transform: `scaleX(${progress})` }} aria-hidden="true" />
+      <div className="shell header-inner relative flex items-center justify-between gap-6">
         <Link
           to="/"
-          className="group flex min-w-0 items-center gap-2.5"
+          className="site-brand"
           onClick={() => setOpen(false)}
           aria-label="Fusionify home"
         >
-          <img
-            src={assetUrl(mark)}
-            alt=""
-            width={28}
-            height={28}
-            className="h-7 w-7 shrink-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.06]"
-          />
-          <span className="truncate font-display text-[15px] font-extrabold tracking-[-0.03em] text-ink">
-            FUSIONIFY
-          </span>
+          <img src={assetUrl(mark)} alt="" width={30} height={30} />
+          <span>FUSIONIFY</span>
         </Link>
-
-        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 md:flex">
+        <nav className="header-nav" aria-label="Main navigation">
           {nav.map((item) => (
-            <Link key={item.to} to={item.to} className="nav-item">
+            <Link key={item.to} to={item.to}>
               {item.label}
             </Link>
           ))}
         </nav>
-
-        <div className="flex items-center gap-3">
-          <Link
-            to="/contact"
-            className="link-quiet hidden text-[13.5px] lg:inline-block"
+        <div className="header-controls">
+          <button
+            type="button"
+            className="theme-button"
+            onClick={toggleTheme}
+            aria-label="Dark mode"
+            aria-pressed={dark}
           >
-            Client login
-          </Link>
-          <span className="hidden h-4 w-px bg-hairline lg:block" />
-          <Link
-            to="/contact"
-            className="btn btn-primary hidden h-10 px-5 text-[13px] md:inline-flex"
-          >
+            {dark ? <Moon aria-hidden="true" /> : <Sun aria-hidden="true" />}
+          </button>
+          <Link to="/contact" className="btn btn-primary header-cta">
             Start a conversation
           </Link>
           <button
+            ref={menuButton}
             type="button"
+            className="menu-button"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-hairline transition-colors duration-500 hover:bg-ink/[0.04] md:hidden"
+            aria-controls="mobile-navigation"
+            onClick={() => setOpen((value) => !value)}
           >
-            <span className="relative block h-[9px] w-[17px]">
-              <span
-                className={cn(
-                  "absolute inset-x-0 top-0 h-px bg-ink transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
-                  open && "translate-y-[4px] rotate-45",
-                )}
-              />
-              <span
-                className={cn(
-                  "absolute inset-x-0 bottom-0 h-px bg-ink transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
-                  open && "-translate-y-[4px] -rotate-45",
-                )}
-              />
-            </span>
+            {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
           </button>
         </div>
       </div>
-
-      <div
-        className={cn(
-          "relative overflow-hidden bg-background/95 backdrop-blur-xl transition-[max-height,opacity] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] md:hidden",
-          open ? "max-h-[70vh] opacity-100" : "max-h-0 opacity-0",
-        )}
+      <nav
+        id="mobile-navigation"
+        className="mobile-nav relative md:hidden"
+        hidden={!open}
+        aria-label="Mobile navigation"
       >
-        <div className="shell flex flex-col border-t border-hairline py-3">
-          {nav.map((item, i) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              onClick={() => setOpen(false)}
-              style={{
-                transitionDelay: open ? `${90 + i * 60}ms` : "0ms",
-              }}
-              className={cn(
-                "border-b border-hairline py-4 font-display text-[17px] tracking-[-0.02em] text-muted-foreground transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] last:border-b-0",
-                open ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0",
-              )}
-              activeProps={{ className: "text-ink" }}
-            >
-              {item.label}
-            </Link>
-          ))}
-          <Link
-            to="/contact"
-            onClick={() => setOpen(false)}
-            className="btn btn-primary mt-5 h-11 w-full text-[13.5px]"
-          >
-            Start a conversation
+        {nav.map((item) => (
+          <Link key={item.to} to={item.to} onClick={() => setOpen(false)}>
+            {item.label}
           </Link>
-        </div>
-      </div>
+        ))}
+        <Link to="/contact" className="btn btn-primary" onClick={() => setOpen(false)}>
+          Start a conversation
+        </Link>
+      </nav>
     </header>
   );
 }

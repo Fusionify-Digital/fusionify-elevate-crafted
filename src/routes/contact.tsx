@@ -33,14 +33,33 @@ function Contact() {
   const [checked, setChecked] = useState(false);
 
   return (
-    <section className="shell section-top">
+    <>
+      <section className="shell page-hero section-top contact-page-hero">
+        <div className="grid-12 gap-y-10">
+          <div className="col-span-12 lg:col-span-8">
+            <Reveal>
+              <p className="sheet-label"><span>01</span> Contact</p>
+              <h1 className="mt-6 text-[2.75rem] leading-[1.01] font-extrabold sm:text-[4.5rem]">
+                Let&rsquo;s build something that moves.
+              </h1>
+            </Reveal>
+          </div>
+          <div className="col-span-12 lg:col-span-3 lg:col-start-10 lg:self-end">
+            <Reveal delay={120} variant="fade">
+              <p className="text-[15.5px] leading-[1.75] text-white/80">
+                Automation, payments, a website, software or a custom digital system.
+              </p>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="shell section-y">
       <div className="grid-12 gap-y-16">
         <div className="col-span-12 lg:col-span-5">
           <Reveal>
-            <p className="eyebrow">Contact</p>
-            <h1 className="mt-6 text-[2.75rem] leading-[1.05] font-extrabold sm:text-[3.25rem]">
-              Get in touch.
-            </h1>
+            <p className="sheet-label"><span>02</span> Tell us about the project</p>
+            <h2 className="mt-6 text-[2.25rem] leading-[1.05] font-extrabold sm:text-[3.25rem]">Get in touch.</h2>
             <p className="mt-6 max-w-sm text-[15.5px] leading-[1.75] text-muted-foreground">
               Tell us what you need — automation, payments, a website, software or a custom
               system. You can also email hello@fusionify.id.
@@ -138,6 +157,7 @@ function Contact() {
           </Reveal>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -11,20 +11,17 @@ const navigate = [
 
 const ecosystem = ["Fusionify Bot", "FTV Pay", "Fusionify Solutions", "FTV Injector"];
 
-const practice = [
-  "Digital infrastructure",
-  "Automation",
-  "Payments",
-  "Software & websites",
-];
+const practice = ["Digital infrastructure", "Automation", "Payments", "Software & websites"];
 
 const legal = ["Privacy notice", "Terms of engagement", "Security posture", "Accessibility"];
 
-
 export function SiteFooter() {
   return (
-    <footer className="rule-top bg-surface">
-      <div className="shell py-20 lg:py-28">
+    <footer className="site-footer rule-top bg-background">
+      <div className="shell py-12 lg:py-16">
+        <div className="footer-wordmark" aria-hidden="true">
+          FUSIONIFY
+        </div>
         {/* Masthead */}
         <div className="grid-12 gap-y-10">
           <div className="col-span-12 lg:col-span-5">
@@ -43,8 +40,8 @@ export function SiteFooter() {
             </div>
             <p className="mt-6 max-w-sm text-[15px] leading-[1.75] text-muted-foreground">
               Fusionify is a growing digital technology ecosystem. Registered as PT Fusionify
-              Digital Store (Bogor, 18 August 2024). A name change to PT Fusionify Digital Group
-              is planned for 2027.
+              Digital Store (Bogor, 18 August 2024). A name change to PT Fusionify Digital Group is
+              planned for 2027.
             </p>
           </div>
 
@@ -100,14 +97,11 @@ export function SiteFooter() {
             </ul>
           </div>
 
-
           <div className="col-span-6 lg:col-span-2">
             <p className="eyebrow">Legal · Unpublished</p>
             <ul className="mt-6 space-y-3.5 text-[14px] text-muted-foreground">
               {legal.map((item) => (
-                <li key={item}>
-                  {item}
-                </li>
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
@@ -119,7 +113,10 @@ export function SiteFooter() {
               <br />
               Indonesia
             </address>
-            <a href="mailto:hello@fusionify.id" className="link-quiet mt-4 inline-block text-[14px]">
+            <a
+              href="mailto:hello@fusionify.id"
+              className="link-quiet mt-4 inline-block text-[14px]"
+            >
               hello@fusionify.id
             </a>
           </div>

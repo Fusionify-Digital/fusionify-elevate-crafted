@@ -1,6 +1,8 @@
 # Fusionify Elevate
 
-Design and build a world-class corporate website for PT FUSIONIFY DIGITAL GROUP that feels handcrafted by a senior product designer from Stripe, Linear, Apple, and Vercel. Avoid all common AI-generated website patterns, coding aesthetics, emoji, excessive gradients, glassmorphism, neon colors, template layouts, and generic SaaS designs. Use a clean white-first interface with only Fusionify's brand palette (blue, indigo, subtle purple accent), generous whitespace, premium typography (Plus Jakarta Sans & Inter), a strict 12-column grid, and pixel-perfect spacing. Create elegant micro-interactions, buttery-smooth scroll animations, subtle parallax, staggered reveals, and premium motion inspired by Apple. The hero section should feature a photorealistic floating 3D Fusionify logo or mascot with soft lighting, gentle rotation, and depth, not a fake dashboard. Every section should feel intentional, editorial, and minimal while communicating trust, innovation, and enterprise quality. The overall impression must be that of a billion-dollar technology company rather than a startup template, with meticulous visual hierarchy, refined details, understated luxury, and an unmistakably custom-crafted identity.
+Company website for FUSIONIFY, built with React, TanStack Start and Tailwind CSS. The current experience combines a full-height painted-sky hero, animated cloud transitions, an interactive CSS 3D system scene, warm cream surfaces, navy dark mode and expressive typography. Existing company content, routes and validation-only contact behavior are retained.
+
+See [the design notes](docs/blueprint-design.md) for colors, interaction behavior and verification.
 
 This project was built with [Lovable](https://lovable.dev).
 
